@@ -1,5 +1,5 @@
 * {
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
     box-sizing: border-box;
 }
 body {
@@ -51,9 +51,10 @@ body {
     color: white;
     outline: none;
 
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 
     cursor: pointer;
+    opacity: 1;
 }
 .content {
     position: relative;

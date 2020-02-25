@@ -27,19 +27,25 @@ let pivot = false;
   // when hovering the button:
 button.addEventListener("mouseover", ()=> {
   if (!pivot) {
+      // make a page pivot magnet :
     floatingPage.style.borderTopLeftRadius = "15%";
-    menuButton.style.top = "18px";
+      // blur the button :
+    menuButton.style.opacity = "0";
     setTimeout(() => {
-      menuButton.style.top = "0px";
-    }, 200);
+      menuButton.style.opacity = "1";
+    }, 1000);
+
   }else {
+      // make a page pivot magnet :
     floatingPage.style.top = "190px";
-    menuButton.style.top = "18px";
+      // blur the button :
+    menuButton.style.opacity = "0";
     setTimeout(() => {
-      menuButton.style.top = "0px";
-    }, 200);
+      menuButton.style.opacity = "1";
+    }, 1000);
   }
 })
+
 button.addEventListener("mouseout", ()=> {
   if (!pivot) {
     floatingPage.style.borderTopLeftRadius = "0%";
