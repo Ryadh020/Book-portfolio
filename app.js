@@ -1,6 +1,9 @@
 // pivot page elemnts:
-const butttton = document.querySelector(".menu");
+
 const page = document.querySelector(".back");
+
+const butttton = document.querySelector(".menu");
+
 
   // detect if the + butto is clicked or no:
 let Showen = false;
@@ -99,13 +102,3 @@ butttton.addEventListener("mouseout", ()=> {
     }
   })
 
-
-
-let array = [];
-let counter = 1;
-
-for (let index = 0; index < 100; index++) {
-  array.push(counter);
-  counter++
-}
-console.log(array);
