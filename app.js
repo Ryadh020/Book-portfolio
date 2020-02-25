@@ -1,20 +1,17 @@
-// pivot page elemnts:
+  // Elemnts:
+const Book = document.querySelector(".Book");
+const floatingPage = document.querySelector(".floatingPage");
+  // Butttons
+const button = document.querySelector(".Button");
+const menuButton = document.querySelector(".menuButton");
+  // Pages Number (counter):
+const pagesNumber = document.querySelector(".pagesNumber");
+const actualPage = document.querySelector(".actual");
+  // Content:
+const scontent = document.querySelector(".content");
 
-const page = document.querySelector(".back");
-
-const butttton = document.querySelector(".menu");
-
-
-  // detect if the + butto is clicked or no:
-let Showen = false;
-
-
-
-// IV. Pivoting page :
-const scontent = document.querySelector(".scontent");
-
-const h1 = document.querySelector(".h1");
-const stitle = document.querySelector(".stitle");
+const h1 = document.querySelector(".titleContainer");
+const stitle = document.querySelector(".title");
 
 const fline = document.querySelector(".fline");
 const frstline = document.querySelector(".frstline");
@@ -22,44 +19,40 @@ const frstline = document.querySelector(".frstline");
 const sline = document.querySelector(".sline");
 const scndLine = document.querySelector(".scndLine");
 
-const menuButton = document.querySelector(".menuButton");
-
-const pagesNumber = document.querySelector(".pagesNumber");
-const actualPage = document.querySelector(".actual");
-
-
+  // detect if the + butto is clicked or no:
+let Showen = false;
   // detect the page pivoting:
 let pivot = false;
 
   // when hovering the button:
-butttton.addEventListener("mouseover", ()=> {
+button.addEventListener("mouseover", ()=> {
   if (!pivot) {
-    page.style.borderTopLeftRadius = "15%";
+    floatingPage.style.borderTopLeftRadius = "15%";
     menuButton.style.top = "18px";
     setTimeout(() => {
       menuButton.style.top = "0px";
     }, 200);
   }else {
-    page.style.top = "190px";
+    floatingPage.style.top = "190px";
     menuButton.style.top = "18px";
     setTimeout(() => {
       menuButton.style.top = "0px";
     }, 200);
   }
 })
-butttton.addEventListener("mouseout", ()=> {
+button.addEventListener("mouseout", ()=> {
   if (!pivot) {
-    page.style.borderTopLeftRadius = "0%";
+    floatingPage.style.borderTopLeftRadius = "0%";
   }else {
-    page.style.top = "200px";
+    floatingPage.style.top = "200px";
   }
 })
 
   // when cliking the button:
-  butttton.addEventListener("click", ()=> {
+  button.addEventListener("click", ()=> {
     if (!pivot) {
       setTimeout(() => {
-        page.style.borderTopLeftRadius = "100%";
+        floatingPage.style.borderTopLeftRadius = "100%";
         menuButton.style.color = "black";
         // animate the actual page button:
         actualPage.style.left = "50px";
@@ -71,7 +64,7 @@ butttton.addEventListener("mouseout", ()=> {
         }, 500);
       }, 0);
       setTimeout(() => {
-        page.style.top = "200px";
+        floatingPage.style.top = "200px";
           // show the text content:
         stitle.style.top = "0px";
         frstline.style.top = "0px";
@@ -80,7 +73,7 @@ butttton.addEventListener("mouseout", ()=> {
       pivot = true;
     } else {
       setTimeout(() => {
-        page.style.top = "0px";
+        floatingPage.style.top = "0px";
         menuButton.style.color = "white";
           // animate the actual page button:
           pagesNumber.style.color = "white";
@@ -92,7 +85,7 @@ butttton.addEventListener("mouseout", ()=> {
         }, 500);
       }, 0);
       setTimeout(() => {
-        page.style.borderTopLeftRadius = "0%";
+        floatingPage.style.borderTopLeftRadius = "0%";
           // show the text content:
         stitle.style.top = "42px";
         frstline.style.top = "30px";
