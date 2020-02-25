@@ -1,0 +1,130 @@
+* {
+    /*outline: 1px red solid;*/
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+
+
+.pivot {
+    width: 400px;
+    height: 200px;
+
+    border: 1px red solid;
+    background-color: aqua;
+
+    overflow: hidden;
+}
+
+.back {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 200px;
+
+    background-color: black;
+    border-top-left-radius: 0%;
+
+    transition:  1s all ease;
+}
+
+.menu {
+    position: relative;
+    top: -180px;
+    right: -330px;
+    overflow: hidden;
+
+    z-index: +1;
+
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+.menuButton {
+    position: relative;
+    top: 0px;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+}
+
+.scontent {
+    position: relative;
+    top: -250px;
+    padding: 15px;
+}
+
+.h1 {
+    overflow: hidden;
+}
+.stitle {
+    position: relative;
+    top: 42px;
+
+    transition: all 1s ease;
+}
+
+
+
+.fline {
+    width: 100;
+    height: 30px;
+    overflow: hidden;
+    
+}
+.frstline {
+    position: relative;
+    top: 30px;
+
+    transition: all 1s ease;
+}
+
+
+
+.sline {
+    width: 100;
+    height: 30px;
+    overflow: hidden;
+}
+.scndLine {
+    position: relative;
+    top: 30px;
+
+    transition: all 1s ease;
+}
+
+.pagesNumber {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    top: -90px;
+    left: 350px;
+
+    color: white;
+    transition: all 1s ease;
+}
+
+.actual {
+    position: relative;
+    left: 0px;
+
+    transition: all 0.5s ease;
+}
