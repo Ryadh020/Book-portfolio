@@ -115,6 +115,39 @@ body {
     transition: all 0.5s ease;
 }
 
+/* logo section*/
+.logo {
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+
+    color: white;
+}
+
+.logo-image {
+    width: 85px;
+    height: 60px;
+
+    cursor: pointer;
+}
+
+.logo-name {
+    height: 20px;
+
+    overflow: hidden;
+}
+.logo-name-text {
+    position: relative;
+    top: 0px;
+    
+    transition: all 0.3s ease;
+}
+
     /* for mobiles :*/
 
 @media only screen and (max-width: 600px) {
@@ -152,5 +185,36 @@ body {
     left: 0px;
 
     transition: all 0.5s ease;
+}
+/* logo */
+.logo {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+
+    color: white;
+}
+.logo-image {
+    width: 85px;
+    height: 60px;
+
+    cursor: pointer;
+}
+
+.logo-name {
+    height: 20px;
+
+    overflow: hidden;
+}
+.logo-name-text {
+    position: relative;
+    top: 0px;
+    
+    transition: all 0.3s ease;
 }
 }

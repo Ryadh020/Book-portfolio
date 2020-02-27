@@ -19,48 +19,60 @@ const frstline = document.querySelector(".frstline");
 const sline = document.querySelector(".sline");
 const scndLine = document.querySelector(".scndLine");
 
+// Logo:
+const logoContainer = document.querySelector(".logo");
+const logoText = document.querySelector(".logo-name-text");
+
   // detect if the + butto is clicked or no:
 let Showen = false;
   // detect the page pivoting:
 let pivot = false;
 
-  // when hovering the button:
+  // blur the button when cliking the button:
+button.addEventListener("click", ()=> {
+  if (!pivot) {
+      // blur the button :
+    menuButton.style.opacity = "0";
+    setTimeout(() => {
+      menuButton.innerHTML = "back";
+      menuButton.style.opacity = "1";
+    }, 800);
+  }else {
+      // blur the button :
+    menuButton.style.opacity = "0";
+    setTimeout(() => {
+      menuButton.innerHTML = "menu";
+      menuButton.style.opacity = "1";
+    }, 800);
+  }
+})
+  // make the magnet effect to the page:
 button.addEventListener("mouseover", ()=> {
   if (!pivot) {
-      // make a page pivot magnet :
-    floatingPage.style.borderTopLeftRadius = "15%";
-      // blur the button :
-    menuButton.style.opacity = "0";
-    setTimeout(() => {
-      menuButton.style.opacity = "1";
-    }, 1000);
-
-  }else {
-      // make a page pivot magnet :
-    floatingPage.style.top = "190px";
-      // blur the button :
-    menuButton.style.opacity = "0";
-    setTimeout(() => {
-      menuButton.style.opacity = "1";
-    }, 1000);
-  }
+    // make a page pivot magnet :
+  floatingPage.style.borderTopLeftRadius = "15%";
+}else {
+    // make a page pivot magnet :
+  floatingPage.style.top = `95%`;
+}
 })
-
 button.addEventListener("mouseout", ()=> {
   if (!pivot) {
-    floatingPage.style.borderTopLeftRadius = "0%";
-  }else {
-    floatingPage.style.top = "200px";
-  }
+    // make a page pivot magnet :
+  floatingPage.style.borderTopLeftRadius = "0%";
+}else {
+    // make a page pivot magnet :
+    floatingPage.style.top = `100%`;
+}
 })
 
-  // when cliking the button:
+  // turn the page when cliking the button:
   button.addEventListener("click", ()=> {
     if (!pivot) {
       setTimeout(() => {
         floatingPage.style.borderTopLeftRadius = "100%";
         menuButton.style.color = "black";
-        // animate the actual page button:
+          // animate the actual page counter:
         actualPage.style.left = "50px";
         pagesNumber.style.color = "black";
         setTimeout(() => {
@@ -70,12 +82,12 @@ button.addEventListener("mouseout", ()=> {
         }, 500);
       }, 0);
       setTimeout(() => {
-        floatingPage.style.top = "200px";
+        floatingPage.style.top = `${screen.width}%`;
           // show the text content:
         stitle.style.top = "0px";
         frstline.style.top = "0px";
         scndLine.style.top = "0px";
-      }, 400);
+      }, 1000);
       pivot = true;
     } else {
       setTimeout(() => {
@@ -100,4 +112,5 @@ button.addEventListener("mouseout", ()=> {
       pivot = false;
     }
   })
+
 
