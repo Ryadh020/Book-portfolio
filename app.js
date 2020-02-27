@@ -113,4 +113,12 @@ button.addEventListener("mouseout", ()=> {
     }
   })
 
+//Logo sign effect (show and hide name when hovernig logo):
 
+logoContainer.addEventListener("mouseover", ()=> {
+  logoText.style.top = "-20px";
+})
+
+logoContainer.addEventListener("mouseout", ()=> {
+  logoText.style.top = "0px";
+})
