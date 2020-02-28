@@ -14,7 +14,16 @@ const h1 = document.querySelector(".titleContainer");
 const stitle = document.getElementsByClassName("title");
 
 const fline = document.querySelector(".fline");
-const frstline = document.getElementsByClassName("frstline");
+const frstline = document.getElementsByClassName("line");
+  // first and second title
+let first = document.querySelector("#first");
+let second = document.querySelector("#second");
+  // all text
+let frst = document.querySelector("#frst");
+let scnd = document.querySelector("#scnd");
+let thrd = document.querySelector("#thrd");
+let ffth = document.querySelector("#ffth");
+let sxth = document.querySelector("#sxth");
 
 // Logo:
 const logoContainer = document.querySelector(".logo");
@@ -67,27 +76,55 @@ button.addEventListener("mouseout", ()=> {
   button.addEventListener("click", ()=> {
     if (!pivot) {
       setTimeout(() => {
+          // hide the text content:
+        for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.top = "52px";
+        }
+        for (var i = 0; i < frstline.length; i++) {
+          frstline[i].style.top = "30px";
+        }
+      }, 800);
+      setTimeout(() => {
         floatingPage.style.borderTopLeftRadius = "100%";
         menuButton.style.color = "black";
           // animate the actual page counter:
         actualPage.style.left = "50px";
         pagesNumber.style.color = "black";
-        setTimeout(() => {
-          actualPage.style.left = "0px";
-            // change the page number:
-          actualPage.innerHTML = "2";
-        }, 500);
-      }, 0);
+      }, 900);
+      setTimeout(() => {
+        actualPage.style.left = "0px";
+          // change the page number:
+        actualPage.innerHTML = "2";
+      }, 1000);
+
+
+
+
       setTimeout(() => {
         floatingPage.style.top = `${screen.width}%`;
-          // show the text content:
-        for (var i = 0; i < stitle.length; i++) {
-          stitle[i].style.top = "0px";
-        }
-        for (var i = 0; i < frstline.length; i++) {
-          frstline[i].style.top = "0px";
-        }
-      }, 1000);
+          // change text content
+        first.innerHTML = "What I Do";
+        second.innerHTML = "What I Do";
+        frst.innerHTML = "What I Do";
+        scnd.innerHTML = "What I Do";
+        thrd.innerHTML = "What I Do";
+        ffth.innerHTML = "What I Do";
+        sxth.innerHTML = "What I Do";
+
+      }, 1010);
+      setTimeout(() => {
+        // Show the text content:
+      for (var i = 0; i < stitle.length; i++) {
+        stitle[i].style.color = "black";    // change the color
+        stitle[i].style.top = "0px";  // show text
+      }
+      for (var i = 0; i < frstline.length; i++) {
+        frstline[i].style.color = "black";   // change the color
+        frstline[i].style.top = "0px";  // show text
+      }
+    }, 1200);
+
+
       pivot = true;
     } else {
       setTimeout(() => {

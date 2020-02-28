@@ -72,7 +72,7 @@ body {
     /*top: 52px;*/
     top: 0px;
 
-    transition: all 1s ease;
+    transition: all 0.8s ease;
 }
 .fline {
     width: 100;
@@ -80,12 +80,12 @@ body {
     overflow: hidden;
     
 }
-.frstline {
+.line {
     position: relative;
     /*top: 45px;*/
     top: 0px;
 
-    transition: all 1s ease;
+    transition: all 0.8s ease;
 }
 
 .pagesNumber {
