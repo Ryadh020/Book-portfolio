@@ -74,7 +74,7 @@ button.addEventListener("mouseout", ()=> {
 
   // turn the page when cliking the button:
   button.addEventListener("click", ()=> {
-    if (!pivot) {
+    if (!pivot) {  // the first page
       setTimeout(() => {
           // hide the text content:
         for (var i = 0; i < stitle.length; i++) {
@@ -95,22 +95,17 @@ button.addEventListener("mouseout", ()=> {
         actualPage.style.left = "0px";
           // change the page number:
         actualPage.innerHTML = "2";
-      }, 1000);
-
-
-
-
+      }, 1500);
       setTimeout(() => {
         floatingPage.style.top = `${screen.width}%`;
           // change text content
         first.innerHTML = "What I Do";
-        second.innerHTML = "What I Do";
-        frst.innerHTML = "What I Do";
-        scnd.innerHTML = "What I Do";
-        thrd.innerHTML = "What I Do";
-        ffth.innerHTML = "What I Do";
-        sxth.innerHTML = "What I Do";
-
+        second.innerHTML = "What I Know";
+        frst.innerHTML = "create and edit  modern web sites and phone applications";
+        scnd.innerHTML = "Improve web sites with  fresh user interfaces";
+        thrd.innerHTML = "Build custom mobile applications for android/IOS ";
+        ffth.innerHTML = "HTML5/CSS3/JS";
+        sxth.innerHTML = "React/React native";
       }, 1010);
       setTimeout(() => {
         // Show the text content:
@@ -122,33 +117,52 @@ button.addEventListener("mouseout", ()=> {
         frstline[i].style.color = "black";   // change the color
         frstline[i].style.top = "0px";  // show text
       }
-    }, 1200);
-
-
+    }, 2000);
       pivot = true;
-    } else {
+    } else { // the second page:
       setTimeout(() => {
-        floatingPage.style.top = "0px";
-        menuButton.style.color = "white";
-          // animate the actual page button:
-          pagesNumber.style.color = "white";
-        actualPage.style.left = "50px";
-        setTimeout(() => {
-          actualPage.style.left = "0px";
-            // change the page number:
-          actualPage.innerHTML = "1";
-        }, 500);
-      }, 0);
-      setTimeout(() => {
-        floatingPage.style.borderTopLeftRadius = "0%";
-          // show the text content:
-        for (var i = 0; i < stitle.length; i++) {
-          stitle[i].style.top = "52px";
-        }
-        for (var i = 0; i < frstline.length; i++) {
-          frstline[i].style.top = "30px";
-        }
-      }, 800);
+        // hide the text content:
+      for (var i = 0; i < stitle.length; i++) {
+        stitle[i].style.top = "52px";
+      }
+      for (var i = 0; i < frstline.length; i++) {
+        frstline[i].style.top = "30px";
+      }
+    }, 2200);
+    setTimeout(() => {
+      floatingPage.style.borderTopLeftRadius = "0%";
+      menuButton.style.color = "white";
+        // animate the actual page counter:
+      actualPage.style.left = "50px";
+      pagesNumber.style.color = "black";
+    }, 900);
+    setTimeout(() => {
+      actualPage.style.left = "0px";
+        // change the page number:
+      actualPage.innerHTML = "1";
+    }, 1500);
+    setTimeout(() => {
+      floatingPage.style.top = `0px`;
+        // change text content
+      first.innerHTML = "Who i am i ?";
+      second.innerHTML = "What i love ?";
+      frst.innerHTML = "Web designer";
+      scnd.innerHTML = "Based in Algeria";
+      thrd.innerHTML = "Called Riyadh";
+      ffth.innerHTML = "learn new technologies and tools";
+      sxth.innerHTML = "create new things";
+    }, 2000);
+    setTimeout(() => {
+      // Show the text content:
+    for (var i = 0; i < stitle.length; i++) {
+      stitle[i].style.color = "white";    // change the color
+      stitle[i].style.top = "0px";  // show text
+    }
+    for (var i = 0; i < frstline.length; i++) {
+      frstline[i].style.color = "white";   // change the color
+      frstline[i].style.top = "0px";  // show text
+    }
+  }, 2200);
       pivot = false;
     }
   })

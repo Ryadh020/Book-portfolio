@@ -87,6 +87,14 @@ body {
 
     transition: all 0.8s ease;
 }
+.line:hover {
+    position: relative;
+    /*top: 45px;*/
+    top: 0px;
+    left: 10px;
+
+    transition: all 0.8s ease;
+}
 
 .pagesNumber {
     display: flex;
