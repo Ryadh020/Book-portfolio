@@ -1,5 +1,5 @@
 * {
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
     box-sizing: border-box;
 }
 body {
@@ -58,16 +58,19 @@ body {
 }
 .content {
     position: relative;
-    top: -95%;
+    top: -75%;
     height: 50%;
     padding: 15px;
+
+    color: white;
 }
 .titleContainer {
     overflow: hidden;
 }
 .title {
     position: relative;
-    top: 42px;
+    /*top: 52px;*/
+    top: 0px;
 
     transition: all 1s ease;
 }
@@ -79,21 +82,12 @@ body {
 }
 .frstline {
     position: relative;
-    top: 45px;
+    /*top: 45px;*/
+    top: 0px;
 
     transition: all 1s ease;
 }
-.sline {
-    width: 100;
-    height: 45px;
-    overflow: hidden;
-}
-.scndLine {
-    position: relative;
-    top: 45px;
 
-    transition: all 1s ease;
-}
 .pagesNumber {
     display: flex;
     flex-direction: row;
@@ -164,7 +158,7 @@ body {
 }
 .content {
     position: relative;
-    top: -85%;
+    top: -95%;
     height: 50%;
     padding: 15px;
 }

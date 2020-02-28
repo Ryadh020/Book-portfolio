@@ -11,13 +11,10 @@ const actualPage = document.querySelector(".actual");
 const scontent = document.querySelector(".content");
 
 const h1 = document.querySelector(".titleContainer");
-const stitle = document.querySelector(".title");
+const stitle = document.getElementsByClassName("title");
 
 const fline = document.querySelector(".fline");
-const frstline = document.querySelector(".frstline");
-
-const sline = document.querySelector(".sline");
-const scndLine = document.querySelector(".scndLine");
+const frstline = document.getElementsByClassName("frstline");
 
 // Logo:
 const logoContainer = document.querySelector(".logo");
@@ -84,9 +81,12 @@ button.addEventListener("mouseout", ()=> {
       setTimeout(() => {
         floatingPage.style.top = `${screen.width}%`;
           // show the text content:
-        stitle.style.top = "0px";
-        frstline.style.top = "0px";
-        scndLine.style.top = "0px";
+        for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.top = "0px";
+        }
+        for (var i = 0; i < frstline.length; i++) {
+          frstline[i].style.top = "0px";
+        }
       }, 1000);
       pivot = true;
     } else {
@@ -105,9 +105,12 @@ button.addEventListener("mouseout", ()=> {
       setTimeout(() => {
         floatingPage.style.borderTopLeftRadius = "0%";
           // show the text content:
-        stitle.style.top = "42px";
-        frstline.style.top = "30px";
-        scndLine.style.top = "30px";
+        for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.top = "52px";
+        }
+        for (var i = 0; i < frstline.length; i++) {
+          frstline[i].style.top = "30px";
+        }
       }, 800);
       pivot = false;
     }
