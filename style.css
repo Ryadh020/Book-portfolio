@@ -1,5 +1,5 @@
 * {
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
     box-sizing: border-box;
 }
 body {
@@ -190,9 +190,6 @@ body {
 
     transition: all 0.5s ease;
 }
-
-
-
     /* for mobiles :*/
 
 @media only screen and (max-width: 600px) {
@@ -232,6 +229,41 @@ body {
 .actual {
     position: relative;
     left: 0px;
+
+    transition: all 0.5s ease;
+}
+
+/* social media: */
+.socialMedia {
+    position: absolute;
+    bottom: 4%;
+    left: 4.7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 50%;
+    height: 45px;
+
+    transition: all 0.5s ease;
+}
+.showButtons {
+    position: static;
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+}
+.facebook, .instagram, .linkedIn, .gitHub {
+    position: static;
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    background-color: red;
 
     transition: all 0.5s ease;
 }
