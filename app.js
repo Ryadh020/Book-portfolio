@@ -102,8 +102,8 @@ button.addEventListener("mouseout", ()=> {
           // put the turned page to the bottom
         floatingPage.style.top = `${screen.width}%`;
           // change text content
-        first.innerHTML = "What I Do";
-        second.innerHTML = "What I Know";
+        first.innerHTML = "/////////";
+        second.innerHTML = "//////////";
         frst.innerHTML = "///////////////////////////////////////////////////////////";
         scnd.innerHTML = "/////////////////////////////////////////////";
         thrd.innerHTML = "//////////////////////////////////////////////////";
@@ -125,38 +125,38 @@ button.addEventListener("mouseout", ()=> {
 
 
     } else { // the second page:
-      setTimeout(() => {
-        // hide the text content:
-      for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.top = "52px";
-      }
-      for (var i = 0; i < frstline.length; i++) {
-        frstline[i].style.top = "30px";
-      }
-    }, 2200);
-    setTimeout(() => {
-      floatingPage.style.borderTopLeftRadius = "0%";
-      menuButton.style.color = "white";
-        // animate the actual page counter:
-      actualPage.style.left = "50px";
-      pagesNumber.style.color = "black";
-    }, 900);
+
+      // hide the text content:
+    for (var i = 0; i < stitle.length; i++) {
+      stitle[i].style.top = "52px";
+    }
+    for (var i = 0; i < frstline.length; i++) {
+      frstline[i].style.top = "30px";
+    }
+      // pull the page to the top:
+    floatingPage.style.top = `0px`;
+    menuButton.style.color = "white";
+      // animate the actual page counter:
+    actualPage.style.left = "50px";
+    pagesNumber.style.color = "black";
     setTimeout(() => {
       actualPage.style.left = "0px";
         // change the page number:
       actualPage.innerHTML = "1";
-    }, 1500);
+    }, 1000);
+
+
     setTimeout(() => {
-      floatingPage.style.top = `0px`;
+      floatingPage.style.borderTopLeftRadius = "0%";
         // change text content
-      first.innerHTML = "Who i am i ?";
-      second.innerHTML = "What i love ?";
-      frst.innerHTML = "Web designer";
-      scnd.innerHTML = "Based in Algeria";
-      thrd.innerHTML = "Called Riyadh";
-      ffth.innerHTML = "learn new technologies and tools";
-      sxth.innerHTML = "create new things";
-    }, 2000);
+      first.innerHTML = "////////////";
+      second.innerHTML = "////////////";
+      frst.innerHTML = "////////////";
+      scnd.innerHTML = "//////////////////";
+      thrd.innerHTML = "/////////////";
+      ffth.innerHTML = "/////////////////////////////////";
+      sxth.innerHTML = "///////////////////";
+    }, 1000);
     setTimeout(() => {
       // Show the text content:
     for (var i = 0; i < stitle.length; i++) {
@@ -167,7 +167,7 @@ button.addEventListener("mouseout", ()=> {
       frstline[i].style.color = "white";   // change the color
       frstline[i].style.top = "0px";  // show text
     }
-  }, 2200);
+  }, 1200);
       pivot = false;
     }
   })
