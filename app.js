@@ -38,17 +38,21 @@ let pivot = false;
 button.addEventListener("click", ()=> {
   if (!pivot) {
       // blur the button :
+    menuButton.style.fontSize = "0.1rem";
     menuButton.style.opacity = "0";
     setTimeout(() => {
       menuButton.innerHTML = "back";
       menuButton.style.opacity = "1";
+      menuButton.style.fontSize = "1rem";
     }, 800);
   }else {
       // blur the button :
+    menuButton.style.fontSize = "0.1rem";
     menuButton.style.opacity = "0";
     setTimeout(() => {
-      menuButton.innerHTML = "menu";
+      menuButton.innerHTML = "back";
       menuButton.style.opacity = "1";
+      menuButton.style.fontSize = "1rem";
     }, 800);
   }
 })
@@ -119,7 +123,7 @@ button.addEventListener("mouseout", ()=> {
     }, 1000);
       pivot = true;
 
-      
+
     } else { // the second page:
       setTimeout(() => {
         // hide the text content:

@@ -55,6 +55,7 @@ body {
 
     cursor: pointer;
     opacity: 1;
+    font-size: 1rem;
 }
 .content {
     position: relative;
@@ -163,8 +164,9 @@ body {
     
     border-style: none;
     background-color: transparent;
-    color: white;
+    color: green;
     outline: none;
+    font-size: 0.1rem;
 }
 .content {
     position: relative;
