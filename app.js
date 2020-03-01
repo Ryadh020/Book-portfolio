@@ -81,7 +81,7 @@ button.addEventListener("mouseout", ()=> {
     if (!pivot) {  // the first page
         // hide the text content:
       for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.top = "52px";
+        stitle[i].style.top = "58px";
       }
       for (var i = 0; i < frstline.length; i++) {
         frstline[i].style.top = "30px";
@@ -125,10 +125,9 @@ button.addEventListener("mouseout", ()=> {
 
 
     } else { // the second page:
-
       // hide the text content:
     for (var i = 0; i < stitle.length; i++) {
-      stitle[i].style.top = "52px";
+      stitle[i].style.top = "58px";
     }
     for (var i = 0; i < frstline.length; i++) {
       frstline[i].style.top = "30px";
@@ -138,15 +137,14 @@ button.addEventListener("mouseout", ()=> {
     menuButton.style.color = "white";
       // animate the actual page counter:
     actualPage.style.left = "50px";
-    pagesNumber.style.color = "black";
+    pagesNumber.style.color = "white";
     setTimeout(() => {
       actualPage.style.left = "0px";
         // change the page number:
       actualPage.innerHTML = "1";
     }, 1000);
-
-
     setTimeout(() => {
+        // make the turned page effect:
       floatingPage.style.borderTopLeftRadius = "0%";
         // change text content
       first.innerHTML = "////////////";
@@ -167,7 +165,7 @@ button.addEventListener("mouseout", ()=> {
       frstline[i].style.color = "white";   // change the color
       frstline[i].style.top = "0px";  // show text
     }
-  }, 1200);
+  }, 1000);
       pivot = false;
     }
   })
