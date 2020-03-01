@@ -75,38 +75,37 @@ button.addEventListener("mouseout", ()=> {
   // turn the page when cliking the button:
   button.addEventListener("click", ()=> {
     if (!pivot) {  // the first page
-      setTimeout(() => {
-          // hide the text content:
-        for (var i = 0; i < stitle.length; i++) {
-          stitle[i].style.top = "52px";
-        }
-        for (var i = 0; i < frstline.length; i++) {
-          frstline[i].style.top = "30px";
-        }
-      }, 800);
-      setTimeout(() => {
-        floatingPage.style.borderTopLeftRadius = "100%";
-        menuButton.style.color = "black";
-          // animate the actual page counter:
-        actualPage.style.left = "50px";
-        pagesNumber.style.color = "black";
-      }, 900);
+        // hide the text content:
+      for (var i = 0; i < stitle.length; i++) {
+        stitle[i].style.top = "52px";
+      }
+      for (var i = 0; i < frstline.length; i++) {
+        frstline[i].style.top = "30px";
+      }
+        // make page turning effect
+      floatingPage.style.borderTopLeftRadius = "100%";
+        // change text color
+      menuButton.style.color = "black";
+        // animate the actual page counter:
+      actualPage.style.left = "50px";
+      pagesNumber.style.color = "black";
       setTimeout(() => {
         actualPage.style.left = "0px";
-          // change the page number:
+        // change the page number:
         actualPage.innerHTML = "2";
-      }, 1500);
+      }, 1000);
       setTimeout(() => {
+          // put the turned page to the bottom
         floatingPage.style.top = `${screen.width}%`;
           // change text content
         first.innerHTML = "What I Do";
         second.innerHTML = "What I Know";
-        frst.innerHTML = "create and edit  modern web sites and phone applications";
-        scnd.innerHTML = "Improve web sites with  fresh user interfaces";
-        thrd.innerHTML = "Build custom mobile applications for android/IOS ";
+        frst.innerHTML = "///////////////////////////////////////////////////////////";
+        scnd.innerHTML = "/////////////////////////////////////////////";
+        thrd.innerHTML = "//////////////////////////////////////////////////";
         ffth.innerHTML = "HTML5/CSS3/JS";
         sxth.innerHTML = "React/React native";
-      }, 1010);
+      }, 600);
       setTimeout(() => {
         // Show the text content:
       for (var i = 0; i < stitle.length; i++) {
@@ -117,8 +116,10 @@ button.addEventListener("mouseout", ()=> {
         frstline[i].style.color = "black";   // change the color
         frstline[i].style.top = "0px";  // show text
       }
-    }, 2000);
+    }, 1000);
       pivot = true;
+
+      
     } else { // the second page:
       setTimeout(() => {
         // hide the text content:
