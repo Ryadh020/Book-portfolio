@@ -179,3 +179,42 @@ logoContainer.addEventListener("mouseover", ()=> {
 logoContainer.addEventListener("mouseout", ()=> {
   logoText.style.top = "0px";
 })
+
+
+// show and hide social media :
+
+  const socialMedia = document.querySelector(".socialMedia");
+
+  const showButtons = document.querySelector(".showButtons");
+
+  const facebook = document.querySelector(".facebook");
+  const instagram = document.querySelector(".instagram");
+  const linkedIn = document.querySelector(".linkedIn");
+  const gitHub = document.querySelector(".gitHub");
+
+showButtons.addEventListener("click", ()=> {
+  //socialMedia.style.bottom = "30%";
+  //socialMedia.style.left = "55%";
+
+  setTimeout(() => {
+    facebook.style.bottom = "102px";
+    facebook.style.left = "-5px";
+  }, 100);
+
+  setTimeout(() => {
+    instagram.style.bottom = "92px";
+    instagram.style.left = "52px";
+  }, 200);
+
+  setTimeout(() => {
+    linkedIn.style.bottom = "52px";
+    linkedIn.style.left = "92px";
+  }, 300);
+
+  setTimeout(() => {
+    gitHub.style.bottom = "-5px";
+    gitHub.style.left = "102px";
+  }, 400);
+
+  
+})
