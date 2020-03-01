@@ -1,5 +1,5 @@
 * {
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
     box-sizing: border-box;
 }
 body {
@@ -59,9 +59,9 @@ body {
 }
 .content {
     position: relative;
-    top: -95%;
-    height: 50%;
-    padding: 15px;
+    top: -105%;
+    height: 68%;
+    margin: 65px;
 
     color: white;
 }
@@ -111,6 +111,7 @@ body {
     color: white;
     transition: all 1s ease;
     overflow: hidden;
+    z-index: 5;
 }
 .total {
     font-size: 0.9em;
@@ -173,10 +174,10 @@ body {
 }
 .content {
     position: relative;
-    top: -101%;
+    top: -106%;
 
     height: 70%;
-    padding: 40px;
+    margin: 30px;
 
 
 }
