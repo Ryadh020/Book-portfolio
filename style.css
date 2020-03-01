@@ -160,13 +160,12 @@ body {
 /* social media: */
 .socialMedia {
     position: absolute;
-    bottom: 40%;
+    bottom: 47%;
     left: 60%;
-
     width: 45px;
     height: 45px;
 
-    background-color: white;
+    transition: all 0.5s ease;
 }
 .showButtons {
     position: absolute;
@@ -177,6 +176,7 @@ body {
 
     border-radius: 50%;
     background-color: red;
+    cursor: pointer;
 }
 .facebook, .instagram, .linkedIn, .gitHub {
     position: absolute;

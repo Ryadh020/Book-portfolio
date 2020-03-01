@@ -192,29 +192,65 @@ logoContainer.addEventListener("mouseout", ()=> {
   const linkedIn = document.querySelector(".linkedIn");
   const gitHub = document.querySelector(".gitHub");
 
+  let SMClicked = false;
+
+
+
 showButtons.addEventListener("click", ()=> {
-  //socialMedia.style.bottom = "30%";
-  //socialMedia.style.left = "55%";
+  if(!SMClicked) {
+    socialMedia.style.bottom = "40%";
+    socialMedia.style.left = "60%";
+  
+    setTimeout(() => {
+      facebook.style.bottom = "102px";
+      facebook.style.left = "-5px";
+    }, 100);
+  
+    setTimeout(() => {
+      instagram.style.bottom = "92px";
+      instagram.style.left = "52px";
+    }, 200);
+  
+    setTimeout(() => {
+      linkedIn.style.bottom = "52px";
+      linkedIn.style.left = "92px";
+    }, 300);
+  
+    setTimeout(() => {
+      gitHub.style.bottom = "-5px";
+      gitHub.style.left = "102px";
+    }, 400);
+  
+    SMClicked = true;
+
+  } else {
+
+    socialMedia.style.bottom = "47%";
+    socialMedia.style.left = "60%";
 
   setTimeout(() => {
-    facebook.style.bottom = "102px";
-    facebook.style.left = "-5px";
+    facebook.style.bottom = "0%";
+    facebook.style.left = "0%";
   }, 100);
 
   setTimeout(() => {
-    instagram.style.bottom = "92px";
-    instagram.style.left = "52px";
+    instagram.style.bottom = "0%";
+    instagram.style.left = "0%";
   }, 200);
 
   setTimeout(() => {
-    linkedIn.style.bottom = "52px";
-    linkedIn.style.left = "92px";
+    linkedIn.style.bottom = "0%";
+    linkedIn.style.left = "0%";
   }, 300);
 
   setTimeout(() => {
-    gitHub.style.bottom = "-5px";
-    gitHub.style.left = "102px";
+    gitHub.style.bottom = "0%";
+    gitHub.style.left = "0%";
   }, 400);
 
-  
+  SMClicked = false;
+  }
+
+
+
 })
