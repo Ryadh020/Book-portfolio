@@ -250,7 +250,4 @@ showButtons.addEventListener("click", ()=> {
 
   SMClicked = false;
   }
-
-
-
 })
