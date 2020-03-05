@@ -50,12 +50,18 @@ body {
     font-size: 1rem;
 }
 .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     position: relative;
     top: -105%;
     height: 68%;
     margin: 65px;
 
     color: black;
+}
+.left, .right {
+    
 }
 .titleContainer {
     overflow: hidden;
@@ -173,7 +179,7 @@ body {
     left: 0%;
 }
 .facebook, .instagram, .linkedIn, .gitHub {
-    display: none;
+    visibility: hidden;
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -194,13 +200,13 @@ body {
     font-size: 0.1rem;
 }
 .content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: -110%;
 
     height: 70%;
     margin: 30px;
-
-
 }
 .pagesNumber {
     display: flex;
@@ -231,7 +237,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    width: 35%;
+    width: 45%;
     height: 45px;
 
     transition: all 0.5s ease;
@@ -242,18 +248,15 @@ body {
     height: 35px;
 
     border-radius: 50%;
-    background-color: red;
     cursor: pointer;
 }
 .facebook, .instagram, .linkedIn, .gitHub {
+    visibility: visible;
     position: static;
     width: 35px;
     height: 35px;
 
     border-radius: 50%;
-    background-color: red;
-
-    transition: all 0.5s ease;
 }
 /* logo */
 .logo {
