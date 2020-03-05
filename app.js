@@ -74,7 +74,7 @@ button.addEventListener("mouseover", ()=> {
   floatingPage.style.borderTopLeftRadius = "15%";
 }else {
     // make a page pivot magnet :
-  floatingPage.style.top = `95%`;
+  floatingPage.style.top = `100%`;
 }
 })
 button.addEventListener("mouseout", ()=> {
@@ -92,11 +92,11 @@ button.addEventListener("mouseout", ()=> {
     if (!pivot) {  // the first page
         // hide the text content:
       for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.top = "58px";
+        stitle[i].style.top = "108px";
         stitle[i].style.fontSize = "2.4rem";
       }
       for (var i = 0; i < frstline.length; i++) {
-        frstline[i].style.top = "30px";
+        frstline[i].style.top = "60px";
         frstline[i].style.fontSize = "1.8rem";
       }
         // make page turning effect
@@ -141,11 +141,11 @@ button.addEventListener("mouseout", ()=> {
     } else { // the second page:
       // hide the text content:
     for (var i = 0; i < stitle.length; i++) {
-      stitle[i].style.top = "58px";
+      stitle[i].style.top = "108px";
       stitle[i].style.fontSize = "3rem";
     }
     for (var i = 0; i < frstline.length; i++) {
-      frstline[i].style.top = "30px";
+      frstline[i].style.top = "60px";
       frstline[i].style.fontSize = "2rem";
     }
       // pull the page to the top:
