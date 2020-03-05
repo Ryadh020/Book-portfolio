@@ -93,9 +93,11 @@ button.addEventListener("mouseout", ()=> {
         // hide the text content:
       for (var i = 0; i < stitle.length; i++) {
         stitle[i].style.top = "58px";
+        stitle[i].style.fontSize = "2.4rem";
       }
       for (var i = 0; i < frstline.length; i++) {
         frstline[i].style.top = "30px";
+        frstline[i].style.fontSize = "1.8rem";
       }
         // make page turning effect
       floatingPage.style.borderTopLeftRadius = "100%";
@@ -115,11 +117,11 @@ button.addEventListener("mouseout", ()=> {
           // put the turned page to the bottom
         floatingPage.style.top = `${screen.width}%`;
           // change text content
-        first.innerHTML = "/////////";
-        second.innerHTML = "//////////";
-        frst.innerHTML = "///////////////////////////////////////////////////////////";
-        scnd.innerHTML = "/////////////////////////////////////////////";
-        thrd.innerHTML = "//////////////////////////////////////////////////";
+        first.innerHTML = "What I Do ?";
+        second.innerHTML = "What I Know ?";
+        frst.innerHTML = "create and edit  modern web sites and phone applications";
+        scnd.innerHTML = "Improve web sites with  fresh user interfaces";
+        thrd.innerHTML = "Build custom mobile applications for android/IOS ";
         ffth.innerHTML = "HTML5/CSS3/JS";
         sxth.innerHTML = "React/React native";
       }, 600);
@@ -140,9 +142,11 @@ button.addEventListener("mouseout", ()=> {
       // hide the text content:
     for (var i = 0; i < stitle.length; i++) {
       stitle[i].style.top = "58px";
+      stitle[i].style.fontSize = "3rem";
     }
     for (var i = 0; i < frstline.length; i++) {
       frstline[i].style.top = "30px";
+      frstline[i].style.fontSize = "2rem";
     }
       // pull the page to the top:
     floatingPage.style.top = `0px`;
@@ -161,13 +165,13 @@ button.addEventListener("mouseout", ()=> {
         // make the turned page effect:
       floatingPage.style.borderTopLeftRadius = "0%";
         // change text content
-      first.innerHTML = "////////////";
-      second.innerHTML = "////////////";
-      frst.innerHTML = "////////////";
-      scnd.innerHTML = "//////////////////";
-      thrd.innerHTML = "/////////////";
-      ffth.innerHTML = "/////////////////////////////////";
-      sxth.innerHTML = "///////////////////";
+      first.innerHTML = "Who am i ?"
+      second.innerHTML = "What i love ?"
+      frst.innerHTML = "Web designer";
+      scnd.innerHTML = "Based in Algeria";
+      thrd.innerHTML = "Called Riyadh";
+      ffth.innerHTML = "learn new technologies and tools";
+      sxth.innerHTML = "create new things";
     }, 1000);
     setTimeout(() => {
       // Show the text content:
