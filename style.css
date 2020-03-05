@@ -1,5 +1,5 @@
 * {
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
     box-sizing: border-box;
 }
 body {
@@ -61,9 +61,6 @@ body {
     margin: 65px;
 
     color: black;
-}
-.left, .right {
-    
 }
 .titleContainer {
     overflow: hidden;
@@ -164,8 +161,8 @@ body {
 /* social media: */
 .socialMedia {
     position: absolute;
-    bottom: 47%;
-    left: 38%;
+    bottom: 5%;
+    left: 75%;
     width: 45px;
     height: 45px;
 

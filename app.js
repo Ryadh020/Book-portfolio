@@ -203,8 +203,8 @@ logoContainer.addEventListener("mouseout", ()=> {
 
 showButtons.addEventListener("click", ()=> {
   if(!SMClicked && screen.width >1200 ) {
-    socialMedia.style.bottom = "41%";
-    socialMedia.style.left = "38%";
+    socialMedia.style.bottom = "5%";
+    socialMedia.style.left = "75%";
   
     setTimeout(() => {
       facebook.style.visibility = "visible";
@@ -234,8 +234,8 @@ showButtons.addEventListener("click", ()=> {
 
   } else if(SMClicked && screen.width >1200 ){
 
-    socialMedia.style.bottom = "47%";
-    socialMedia.style.left = "38%";
+    socialMedia.style.bottom = "5%";
+    socialMedia.style.left = "75%";
 
   setTimeout(() => {
     facebook.style.visibility = "hidden";
