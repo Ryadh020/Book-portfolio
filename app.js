@@ -61,7 +61,7 @@ button.addEventListener("click", ()=> {
     menuButton.style.fontSize = "0.1rem";
     menuButton.style.opacity = "0";
     setTimeout(() => {
-      menuButton.innerHTML = "back";
+      menuButton.innerHTML = "next";
       menuButton.style.opacity = "1";
       menuButton.style.fontSize = "1rem";
     }, 800);
@@ -91,14 +91,16 @@ button.addEventListener("mouseout", ()=> {
   button.addEventListener("click", ()=> {
     if (!pivot) {  // the first page
         // hide the text content:
-      for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.top = "108px";
-        stitle[i].style.fontSize = "2.4rem";
-      }
-      for (var i = 0; i < frstline.length; i++) {
-        frstline[i].style.top = "60px";
-        frstline[i].style.fontSize = "1.8rem";
-      }
+
+
+          for (var i = 0; i < stitle.length; i++) {
+            stitle[i].style.top = "108px";
+          }
+          for (var i = 0; i < frstline.length; i++) {
+            frstline[i].style.top = "60px";
+          }
+
+
         // make page turning effect
       floatingPage.style.borderTopLeftRadius = "100%";
         // change text color
@@ -142,11 +144,9 @@ button.addEventListener("mouseout", ()=> {
       // hide the text content:
     for (var i = 0; i < stitle.length; i++) {
       stitle[i].style.top = "108px";
-      stitle[i].style.fontSize = "3rem";
     }
     for (var i = 0; i < frstline.length; i++) {
       frstline[i].style.top = "60px";
-      frstline[i].style.fontSize = "2rem";
     }
       // pull the page to the top:
     floatingPage.style.top = `0px`;
@@ -202,7 +202,7 @@ logoContainer.addEventListener("mouseout", ()=> {
 // show and hide social media :
 
 showButtons.addEventListener("click", ()=> {
-  if(!SMClicked && screen.width >1200 ) {
+  if(!SMClicked && screen.width > 1200 ) {
     socialMedia.style.bottom = "5%";
     socialMedia.style.left = "75%";
   
