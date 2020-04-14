@@ -25,6 +25,11 @@ let thrd = document.querySelector("#thrd");
 let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
+// second content circles:
+let circles = document.querySelector(".circles");
+let circle2 = document.querySelector(".circle2");
+
+
 // Logo:
 const logoContainer = document.querySelector(".logo");
 const logoText = document.querySelector(".logo-name-text");
@@ -263,4 +268,18 @@ showButtons.addEventListener("click", ()=> {
 
   SMClicked = false;
   }
+})
+
+// circles content effect :
+
+circles.addEventListener("mouseenter", ()=> {
+  circle2.style.bottom = "380px";
+  circle2.style.left = "-200px";
+  console.log("hoverd");
+})
+
+circles.addEventListener("mouseout", ()=> {
+  circle2.style.bottom = "0px";
+  circle2.style.left = "200px";
+
 })
