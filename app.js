@@ -26,7 +26,7 @@ let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
 // second content circles:
-let circles = document.querySelector(".circles");
+let circle1 = document.querySelector(".circle1");
 let circle2 = document.querySelector(".circle2");
 
 
@@ -272,14 +272,14 @@ showButtons.addEventListener("click", ()=> {
 
 // circles content effect :
 
-circles.addEventListener("mouseenter", ()=> {
-  circle2.style.bottom = "380px";
-  circle2.style.left = "-200px";
+circle1.addEventListener("mouseenter", ()=> {
+  circle2.style.bottom = "180px";
+  circle2.style.left = "-80px";
   console.log("hoverd");
 })
 
-circles.addEventListener("mouseout", ()=> {
+circle1.addEventListener("mouseout", ()=> {
   circle2.style.bottom = "0px";
-  circle2.style.left = "200px";
+  circle2.style.left = "80px";
 
 })
