@@ -26,7 +26,7 @@ let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
 // second content circles:
-let circle1 = document.querySelectorAll(".circle1");
+let circles = document.querySelectorAll(".circles");
 let circle2 = document.querySelectorAll(".circle2");
 
 
@@ -200,48 +200,24 @@ logoContainer.addEventListener("mouseout", ()=> {
   logoText.style.top = "0px";
 })
 
-// circles content effect :
-if(screen.width > 880) {
 
-  for(circle of circle1) {
-    circle.addEventListener("mouseenter", ()=> {
-      for(hover of circle2) {
-        hover.style.bottom = "180px";
-        hover.style.left = "-80px";
-        console.log("hoverd");
-      }
+// second content circles hovering effect
+
+/* for desktop */
+  circles.forEach((circle, index) => {
+    
+    circle.addEventListener("mousemove", ()=> {
+      circle2[index].style.bottom = "380px";
+      circle2[index].style.left = "-190px";
+      console.log("hoverd");
     })
-  
+
     circle.addEventListener("mouseout", ()=> {
-      for(hover of circle2) {
-        hover.style.bottom = "0px";
-        hover.style.left = "80px";
-      }
+      circle2[index].style.bottom = "0px";
+      circle2[index].style.left = "180px";
     })
-  }
 
-}
-
-
-
-/* for tablets */
-
-if(screen.width > 880) {
-  for(circle of circle1) {
-    circle.addEventListener("mouseenter", ()=> {
-      for(hover of circle2) {
-        hover.style.bottom = "280px";
-        hover.style.left = "-140px";
-        console.log("hoverd");
-      }
-    })
+  });
   
-    circle.addEventListener("mouseout", ()=> {
-      for(hover of circle2) {
-        hover.style.bottom = "0px";
-        hover.style.left = "140px";
-      }
-    })
-  }
-}
+
 

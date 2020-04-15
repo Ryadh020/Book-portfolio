@@ -100,22 +100,22 @@ body {
 .content2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 40vw;
     height: 40vh;
 }
 
 .circles {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     padding: 10px 10px;
 
     overflow: hidden;
 }
 .circle1 {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
 
     display: flex;
     justify-content: center;
@@ -127,10 +127,10 @@ body {
 .circle2 {
     position: relative;
     bottom: 0px;
-    left: 140px;
+    left: 180px;
     
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     margin-top: 10px;
 
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -199,8 +199,6 @@ body {
     transition: all 0.3s ease;
     font-family: 'Poiret One', cursive;
 }
-
-/* social media: */
 /* social media: */
 .socialMedia {
     position: absolute;
