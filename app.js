@@ -26,8 +26,8 @@ let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
 // second content circles:
-let circle1 = document.querySelector(".circle1");
-let circle2 = document.querySelector(".circle2");
+let circle1 = document.querySelectorAll(".circle1");
+let circle2 = document.querySelectorAll(".circle2");
 
 
 // Logo:
@@ -41,9 +41,6 @@ const facebook = document.querySelector(".facebook");
 const instagram = document.querySelector(".instagram");
 const linkedIn = document.querySelector(".linkedIn");
 const gitHub = document.querySelector(".gitHub");
-
-  // detect if the + butto is clicked or no:
-let SMClicked = false;
 
   // detect if the + butto is clicked or no:
 let Showen = false;
@@ -203,83 +200,48 @@ logoContainer.addEventListener("mouseout", ()=> {
   logoText.style.top = "0px";
 })
 
-
-// show and hide social media :
-
-showButtons.addEventListener("click", ()=> {
-  if(!SMClicked && screen.width > 1200 ) {
-    socialMedia.style.bottom = "5%";
-    socialMedia.style.left = "75%";
-  
-    setTimeout(() => {
-      facebook.style.visibility = "visible";
-      facebook.style.bottom = "102px";
-      facebook.style.left = "-5px";
-    }, 100);
-  
-    setTimeout(() => {
-      instagram.style.visibility = "visible";
-      instagram.style.bottom = "92px";
-      instagram.style.left = "52px";
-    }, 200);
-  
-    setTimeout(() => {
-      linkedIn.style.visibility = "visible";
-      linkedIn.style.bottom = "52px";
-      linkedIn.style.left = "92px";
-    }, 300);
-  
-    setTimeout(() => {
-      gitHub.style.visibility = "visible";
-      gitHub.style.bottom = "-5px";
-      gitHub.style.left = "102px";
-    }, 400);
-  
-    SMClicked = true;
-
-  } else if(SMClicked && screen.width >1200 ){
-
-    socialMedia.style.bottom = "5%";
-    socialMedia.style.left = "75%";
-
-  setTimeout(() => {
-    facebook.style.visibility = "hidden";
-    facebook.style.bottom = "0%";
-    facebook.style.left = "0%";
-  }, 100);
-
-  setTimeout(() => {
-    instagram.style.visibility = "hidden";
-    instagram.style.bottom = "0%";
-    instagram.style.left = "0%";
-  }, 200);
-
-  setTimeout(() => {
-    linkedIn.style.visibility = "hidden";
-    linkedIn.style.bottom = "0%";
-    linkedIn.style.left = "0%";
-  }, 300);
-
-  setTimeout(() => {
-    gitHub.style.visibility = "hidden";
-    gitHub.style.bottom = "0%";
-    gitHub.style.left = "0%";
-  }, 400);
-
-  SMClicked = false;
-  }
-})
-
 // circles content effect :
+if(screen.width > 880) {
 
-circle1.addEventListener("mouseenter", ()=> {
-  circle2.style.bottom = "180px";
-  circle2.style.left = "-80px";
-  console.log("hoverd");
-})
+  for(circle of circle1) {
+    circle.addEventListener("mouseenter", ()=> {
+      for(hover of circle2) {
+        hover.style.bottom = "180px";
+        hover.style.left = "-80px";
+        console.log("hoverd");
+      }
+    })
+  
+    circle.addEventListener("mouseout", ()=> {
+      for(hover of circle2) {
+        hover.style.bottom = "0px";
+        hover.style.left = "80px";
+      }
+    })
+  }
 
-circle1.addEventListener("mouseout", ()=> {
-  circle2.style.bottom = "0px";
-  circle2.style.left = "80px";
+}
 
-})
+
+
+/* for tablets */
+
+if(screen.width > 880) {
+  for(circle of circle1) {
+    circle.addEventListener("mouseenter", ()=> {
+      for(hover of circle2) {
+        hover.style.bottom = "280px";
+        hover.style.left = "-140px";
+        console.log("hoverd");
+      }
+    })
+  
+    circle.addEventListener("mouseout", ()=> {
+      for(hover of circle2) {
+        hover.style.bottom = "0px";
+        hover.style.left = "140px";
+      }
+    })
+  }
+}
+
