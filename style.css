@@ -1,5 +1,5 @@
 * {
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
     box-sizing: border-box;
 }
 body {
@@ -10,6 +10,8 @@ body {
     align-items: center;
     padding: 0;
     margin: 0;
+
+    cursor: none;
 }
 .Book {
     width: 100%;
@@ -103,7 +105,7 @@ body {
     justify-content: space-around;
 
     width: 40vw;
-    height: 40vh;
+    padding-top: 35px;
 }
 
 .circles {
@@ -121,7 +123,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    border: 1px black solid;
+    border: 1px rgba(255, 219, 17, 0.849) solid;
     border-radius: 50%;
 }
 .circle2 {
@@ -221,6 +223,31 @@ body {
     height: 35px;
 
     border-radius: 50%;
+}
+ /* cursor styling*/
+ .cursor {
+    position: fixed;
+    left: -100px;
+	top: 50%;
+    width: 35px;
+    height: 35px;
+    transform: translateX(-50%) translateY(-50%);
+
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 0 0 5px 5px rgb(184, 184, 184);
+    border-radius: 50%;
+    pointer-events: none;
+    /*transition: all 100ms linear;*/
+}
+.hover {
+    width: 85px;
+    height: 85px;
+
+    background-color: rgb(73, 73, 73);
+    border: none;
+    box-shadow: 0 0 5px 5px rgb(73, 73, 73);
+
+    mix-blend-mode: difference;
 }
 
     /* for mobiles :*/

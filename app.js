@@ -34,6 +34,9 @@ let circle2 = document.querySelectorAll(".circle2");
 const logoContainer = document.querySelector(".logo");
 const logoText = document.querySelector(".logo-name-text");
 
+// cursor:
+const cursor = document.querySelector("#cursor") 
+
 // docial media:
 const socialMedia = document.querySelector(".socialMedia");
 const showButtons = document.querySelector(".showButtons");
@@ -46,6 +49,7 @@ const gitHub = document.querySelector(".gitHub");
 let Showen = false;
   // detect the page pivoting:
 let pivot = false;
+
 
   // blur the button when cliking the button:
 button.addEventListener("click", ()=> {
@@ -194,10 +198,12 @@ button.addEventListener("mouseout", ()=> {
 
 logoContainer.addEventListener("mouseover", ()=> {
   logoText.style.top = "-20px";
+  cursor.className += " hover";
 })
 
 logoContainer.addEventListener("mouseout", ()=> {
   logoText.style.top = "0px";
+  cursor.className = "cursor";
 })
 
 
@@ -209,15 +215,29 @@ logoContainer.addEventListener("mouseout", ()=> {
     circle.addEventListener("mousemove", ()=> {
       circle2[index].style.bottom = "380px";
       circle2[index].style.left = "-190px";
-      console.log("hoverd");
+
+      cursor.className += " hover"
     })
 
     circle.addEventListener("mouseout", ()=> {
       circle2[index].style.bottom = "0px";
       circle2[index].style.left = "180px";
+
+      cursor.className = "cursor"
     })
 
   });
   
+
+// cuesor moving effect
+let moveMouse = (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  cursor.style.left = x+"px"
+  cursor.style.top = y+"px"
+  
+}
+window.addEventListener("mousemove", moveMouse)
 
 
