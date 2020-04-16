@@ -39,7 +39,7 @@ const cursor = document.querySelector("#cursor")
 
 // docial media:
 const socialMedia = document.querySelector(".socialMedia");
-const showButtons = document.querySelector(".showButtons");
+const somed = document.querySelectorAll(".somed");
 const facebook = document.querySelector(".facebook");
 const instagram = document.querySelector(".instagram");
 const linkedIn = document.querySelector(".linkedIn");
@@ -228,8 +228,20 @@ logoContainer.addEventListener("mouseout", ()=> {
 
   });
   
+/* social media hovering effect */
+somed.forEach(item => {
+  item.addEventListener("mousemove", ()=> {
+    item.className = "hovered"
+    cursor.className += " hover2"
+  })
 
-// cuesor moving effect
+  item.addEventListener("mouseout", ()=> {
+    item.className = "somed"
+    cursor.className = " cursor"
+  })
+});
+
+// cursor moving effect
 let moveMouse = (e) => {
   let x = e.clientX;
   let y = e.clientY;
