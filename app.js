@@ -197,12 +197,12 @@ button.addEventListener("mouseout", ()=> {
 //Logo sign effect (show and hide name when hovernig logo):
 
 logoContainer.addEventListener("mouseover", ()=> {
-  logoText.style.top = "-20px";
+  logoText.style.bottom = "22px";
   cursor.className += " hover";
 })
 
 logoContainer.addEventListener("mouseout", ()=> {
-  logoText.style.top = "0px";
+  logoText.style.bottom = "-5px";
   cursor.className = "cursor";
 })
 

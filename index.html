@@ -5,30 +5,41 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Book</title>
+     <link rel="stylesheet" href="happyStyle.css">
      <link rel="stylesheet" href="style.css">
      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Indie+Flower&family=Poiret+One&display=swap" rel="stylesheet">
      <script src="https://kit.fontawesome.com/67098eac32.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  </head>
- <body>
-    <div class="Book">
-        <div class="floatingPage"></div>
+ <body class="fullScreen column">
+    <div class="Book fullScreen">
+        <div class="floatingPage fullScreen"></div>
 
         <div class="Button"><button class="menuButton">next</button></div>
 
-        <div class="pagesNumber">
+        <div class="pagesNumber row">
             <h3 class="total">2</h3> <h3>_</h3> <h3 class="actual">1</h3>
         </div>
 
-        <div class="logo">
+        <div class="logo row">
             <img class="logo-image" src="./Images/happy-dev.png" alt="logo" srcset="">
             <div class="logo-name">
                 <h3 class="logo-name-text">Happy Dev</h3>
             </div>
         </div>
 
-        <div class="content">
-            <div class="left">
+        <div class="socialMedia row">
+            <div class="somed facebook"><i class="fab fa-google"></i></div>
+            <div class="somed gitHub"><i class="fab fa-github"></i></div>
+            <div class="somed linkedIn"><i class="fab fa-lg fa-linkedin-in"></i></div>
+            <div class="somed instagram"><i class="fab fa-lg fa-instagram"></i></div>
+        </div>
+
+        <div class="cursor" id="cursor"></div>
+
+
+        <div class="content row">
+            <div class="left column">
                 <div class="titleContainer"><h1 id="first" class="title">Who am i ?</h1></div>
                 <div class="fline"><p id="frst" class="line">//</p></div>
                 <div class="fline"><p id="scnd" class="line">Based in //</p></div>
@@ -69,15 +80,6 @@
             </div>
 
         </div>
-        
-        <div class="socialMedia">
-            <div class="somed facebook"><i class="fab fa-google"></i></div>
-            <div class="somed gitHub"><i class="fab fa-github"></i></div>
-            <div class="somed linkedIn"><i class="fab fa-lg fa-linkedin-in"></i></div>
-            <div class="somed instagram"><i class="fab fa-lg fa-instagram"></i></div>
-        </div>
-
-        <div class="cursor" id="cursor"></div>
     </div>
 <script src="app.js"></script>
  </body>

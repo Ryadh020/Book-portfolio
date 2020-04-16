@@ -1,41 +1,27 @@
 * {
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
     box-sizing: border-box;
 }
 body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 0;
-    margin: 0;
-
     cursor: none;
 }
 .Book {
-    width: 100%;
-    height: 100vh;
-
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     overflow: hidden;
 }
 .floatingPage {
     position: relative;
     top: 0px;
-    width: 100%;
-    height: 100vh;
-
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border-top-left-radius: 0%;
-
     transition:  1s all ease;
 }
 .Button {
     position: relative;
     height: 45px;
-    top: -90%;
-    right: -90%;
+    bottom: 93%;
+    left: 90%;
 
     z-index: +1;
 }
@@ -47,107 +33,16 @@ body {
 
     transition: all 1s ease;
 
-    cursor: pointer;
     opacity: 1;
     font-size: 1rem;
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
 }
-.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-    top: -102%;
-    height: 68%;
-    margin: 65px;
-
-    color: black;
-}
-.titleContainer {
-    overflow: hidden;
-}
-.title {
-    position: relative;
-    top: 0px;
-
-    transition: all 0.6s ease;
-    font-size: 3rem;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-.fline {
-    width: 100;
-    overflow: hidden;
-    
-}
-.line {
-    position: relative;
-    top: 0px;
-
-    transition: all 0.6s ease;
-    font-size: 2rem;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-.line:hover {
-    position: relative;
-    /*top: 45px;*/
-    top: 0px;
-    left: 6px;
-
-    transition: all 0.6s ease;
-}
-/* second part of content*/
-.content2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    width: 40vw;
-    padding-top: 35px;
-}
-
-.circles {
-    width: 200px;
-    height: 200px;
-    padding: 10px 10px;
-
-    overflow: hidden;
-}
-.circle1 {
-    width: 180px;
-    height: 180px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px rgba(255, 219, 17, 0.849) solid;
-    border-radius: 50%;
-}
-.circle2 {
-    position: relative;
-    bottom: 0px;
-    left: 180px;
-    
-    width: 180px;
-    height: 180px;
-    margin-top: 10px;
-
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    border-radius: 50%;
-
-    transition: all 1000ms ease;
-}
 /* page number */
 .pagesNumber {
-    display: flex;
-    flex-direction: row;
     width: 5%;
-
     position: relative;
-    top: -20%;
+    bottom: 20%;
     left: 91%;
 
     color: black;
@@ -171,10 +66,8 @@ body {
 /* logo section*/
 .logo {
     position: absolute;
-    top: 8%;
-    left: 4%;
-    display: flex;
-    flex-direction: row;
+    bottom: 85%;
+    left: 3%;
     align-items: center;
     width: 280px;
     height: 70px;
@@ -185,18 +78,15 @@ body {
 .logo-image {
     width: 105px;
     height: 80px;
-
-    cursor: pointer;
 }
 
 .logo-name {
     height: 22px;
-
     overflow: hidden;
 }
 .logo-name-text {
     position: relative;
-    top: 0px;
+    bottom: -5px;
     
     transition: all 0.3s ease;
     font-family: 'Poiret One', cursive;
@@ -205,20 +95,17 @@ body {
 .socialMedia {
     position: absolute;
     bottom: 4%;
-    left: 4.7%;
-    display: flex;
-    flex-direction: row;
+    left: 3%;
+
     justify-content: space-around;
     align-items: center;
 
-    width: 25%;
+    width: 20%;
     height: 45px;
 
     transition: all 0.5s ease;
 }
 .facebook, .instagram, .linkedIn, .gitHub {
-    visibility: visible;
-    position: static;
     width: 35px;
     height: 35px;
 
@@ -249,10 +136,102 @@ body {
 
     mix-blend-mode: difference;
 }
+/* content part - main- */
+.content {
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    top: -100%;
 
+    height: 68%;
+    padding: 15px 0;
+
+    color: black;
+}
+/* first part of content */
+.left{
+    justify-content: center;
+    height: 300px;
+}
+.titleContainer {
+    overflow: hidden;
+}
+.title {
+    position: relative;
+    top: -0px;
+
+    transition: all 0.6s ease;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Poiret One', cursive;
+}
+.fline {
+    width: 100;
+    overflow: hidden;
+}
+.line {
+    position: relative;
+    top: 0px;
+
+    transition: all 0.6s ease;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Poiret One', cursive;
+}
+.line:hover {
+    position: relative;
+    /*top: 45px;*/
+    top: 0px;
+    left: 6px;
+
+    transition: all 0.6s ease;
+}
+/* second part of content*/
+.content2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    width: 40vw;
+}
+
+.circles {
+    width: 200px;
+    height: 200px;
+    padding: 10px 10px;
+
+    overflow: hidden;
+}
+.circle1 {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px rgba(0, 0, 0, 0.849) solid;
+    border-radius: 50%;
+}
+.circle2 {
+    position: relative;
+    bottom: 0px;
+    left: 180px;
+    
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 50%;
+
+    transition: all 1000ms ease;
+}
     /* for mobiles :*/
+    /*
 @media only screen and (max-width: 1200px) {
 /* content*/
+/*
 .content {
     display: flex;
     flex-direction: row;
@@ -267,6 +246,7 @@ body {
 }
 @media only screen and (max-width: 920px) and (min-width: 880px){
 /* text content*/
+/*
 .title {
     position: relative;
     top: 0px;
@@ -300,6 +280,7 @@ body {
     font-size: 0.1rem;
 }
 /* content*/
+/*
 .content {
     display: flex;
     flex-direction: column;
@@ -328,6 +309,7 @@ body {
     font-family: 'Poiret One', cursive;
 }
 /* logo */
+/*
 .logo {
     position: absolute;
     top: 2.8%;
@@ -360,6 +342,7 @@ body {
 }
 
 /* page numbers*/
+/*
 .pagesNumber {
     display: flex;
     flex-direction: row;
