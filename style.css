@@ -90,6 +90,7 @@ main {
 /* first part of content */
 .left{
     justify-content: center;
+    height: 300px;
 }
 .titleContainer {
     overflow: hidden;
@@ -130,7 +131,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
 
-    width: 40vw;
+    width: 50vw;
 }
 
 .circles {
