@@ -27,6 +27,7 @@ let sxth = document.querySelector("#sxth");
 
 // second content circles:
 let circles = document.querySelectorAll(".circles");
+let circle1 = document.querySelectorAll(".circle1");
 let circle2 = document.querySelectorAll(".circle2");
 
 
@@ -97,22 +98,26 @@ button.addEventListener("mouseout", ()=> {
   button.addEventListener("click", ()=> {
     if (!pivot) {  // the first page
         // hide the text content:
-
-
           for (var i = 0; i < stitle.length; i++) {
             stitle[i].style.top = "108px";
           }
           for (var i = 0; i < frstline.length; i++) {
             frstline[i].style.top = "60px";
           }
-
-
         // make page turning effect
       floatingPage.style.borderTopLeftRadius = "100%";
         // change text color
       menuButton.style.color = "white";
       socialMedia.style.color = "white"; 
       logoText.style.color = "white"; 
+        // change circles colors:
+      circle1.forEach(circle => {
+        circle.className += " whiteCircle"
+      });
+
+      circle2.forEach(circle => {
+        circle.className += " blackCircle"
+      });
         // animate the actual page counter:
       actualPage.style.left = "50px";
       pagesNumber.style.color = "white";
@@ -159,6 +164,13 @@ button.addEventListener("mouseout", ()=> {
     menuButton.style.color = "black";
     socialMedia.style.color = "black"; 
     logoText.style.color = "black";
+      // change circles colors:
+    circle1.forEach(circle => {
+      circle.className = "circle1"
+    });
+    circle2.forEach(circle => {
+      circle.className = "circle2"
+    });
       // animate the actual page counter:
     actualPage.style.left = "50px";
     pagesNumber.style.color = "black";

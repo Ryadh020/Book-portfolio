@@ -3,26 +3,63 @@
     box-sizing: border-box;
 }
 body {
-    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+
     cursor: none;
-}
-.Book {
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     overflow: hidden;
+
+    justify-content: center;
 }
+
 .floatingPage {
-    position: relative;
+    position: absolute;
     top: 0px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border-top-left-radius: 0%;
     transition:  1s all ease;
+    z-index: -1;
 }
-.Button {
-    position: relative;
-    height: 45px;
-    bottom: 93%;
-    left: 90%;
 
+
+/* header section */
+header {
+    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 55px;
+}
+/* logo */
+.logo {
+    align-items: center;
+
+    color: black;
+}
+
+.logo-image {
+    width: 90px;
+    height: 55px;
+}
+
+.logo-name {
+    height: 22px;
+    overflow: hidden;
+}
+.logo-name-text {
+    position: relative;
+    bottom: -5px;
+    
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', cursive;
+}
+/* wraper button*/
+.Button {
     z-index: +1;
 }
 .menuButton {
@@ -38,127 +75,14 @@ body {
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
 }
-/* page number */
-.pagesNumber {
-    width: 5%;
-    position: relative;
-    bottom: 20%;
-    left: 91%;
+/*main section */
 
-    color: black;
-    transition: all 1s ease;
-    overflow: hidden;
-    z-index: 5;
-}
-.total {
-    font-size: 0.9em;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-.actual {
-    position: relative;
-    left: 0px;
-
-    transition: all 0.5s ease;
-    font-family: 'Poiret One', cursive;
-}
-
-/* logo section*/
-.logo {
-    position: absolute;
-    bottom: 85%;
-    left: 3%;
-    align-items: center;
-    width: 280px;
-    height: 70px;
-
-    color: black;
-}
-
-.logo-image {
-    width: 105px;
-    height: 80px;
-}
-
-.logo-name {
-    height: 22px;
-    overflow: hidden;
-}
-.logo-name-text {
-    position: relative;
-    bottom: -5px;
-    
-    transition: all 0.3s ease;
-    font-family: 'Poiret One', cursive;
-}
-/* social media: */
-.socialMedia {
-    position: absolute;
-    bottom: 4%;
-    left: 3%;
-
-    justify-content: space-around;
-    align-items: center;
-
-    width: 20%;
-    height: 45px;
-
-    transition: all 0.5s ease;
-}
-.somed {
-    width: 35px;
-    height: 35px;
-
-    border-radius: 50%;
-    transition: 1000ms all ease;
-}
-.hovered {
-    width: 45px;
-    height: 45px;
-}
- /* cursor styling*/
- .cursor {
-    position: fixed;
-    left: -100px;
-	top: 50%;
-    width: 35px;
-    height: 35px;
-    transform: translateX(-50%) translateY(-50%);
-
-    border: 1px rgb(206, 206, 206) solid;
-    box-shadow: 0 0 5px 5px rgb(184, 184, 184);
-    border-radius: 50%;
-    pointer-events: none;
-    transition: all 100ms linear;
-}
-.hover {
-    width: 85px;
-    height: 85px;
-
-    background-color: rgb(73, 73, 73);
-    border: none;
-    box-shadow: 0 0 5px 5px rgb(73, 73, 73);
-
-    mix-blend-mode: difference;
-    transition: all 100ms linear;
-}
-.hover2 {
-    width: 55px;
-    height: 55px;
-
-    border: none;
-    box-shadow: 0 0 5px 5px rgb(73, 73, 73);
-
-    transition: all 100ms linear;
-}
 /* content part - main- */
-.content {
+main {
+    flex: 8;
     justify-content: space-around;
     align-items: flex-start;
-    position: relative;
-    top: -100%;
 
-    height: 68%;
     padding: 15px 0;
 
     color: black;
@@ -166,7 +90,6 @@ body {
 /* first part of content */
 .left{
     justify-content: center;
-    height: 300px;
 }
 .titleContainer {
     overflow: hidden;
@@ -225,8 +148,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    border: 1px rgba(0, 0, 0, 0.849) solid;
+    border: 1px rgba(110, 110, 110, 0.849) solid;
     border-radius: 50%;
+}
+.whiteCircle {
+    border: 1px rgba(255, 255, 255, 0.849) solid;
 }
 .circle2 {
     position: relative;
@@ -242,6 +168,97 @@ body {
 
     transition: all 1000ms ease;
 }
+.blackCircle {
+    background-image: linear-gradient(to right, #000000 0%, rgb(2, 2, 2) 100%);
+}
+
+/* footer section */
+footer {
+    flex: 1.4;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+}
+/* page number */
+.pagesNumber {
+    width: 5%;
+
+    color: black;
+    transition: all 1s ease;
+    overflow: hidden;
+    z-index: 5;
+}
+.total {
+    font-size: 0.9em;
+    font-weight: bolder;
+    font-family: 'Poiret One', cursive;
+}
+.actual {
+    position: relative;
+    left: 0px;
+
+    transition: all 0.5s ease;
+    font-family: 'Poiret One', cursive;
+}
+
+
+/* social media: */
+.socialMedia {
+    justify-content: space-around;
+    align-items: center;
+
+    width: 20%;
+    height: 45px;
+
+    transition: all 0.5s ease;
+}
+.somed {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    transition: 1000ms all ease;
+}
+.hovered {
+    width: 45px;
+    height: 45px;
+}
+ /* cursor styling*/
+ .cursor {
+    position: fixed;
+    left: -100px;
+	top: 50%;
+    width: 35px;
+    height: 35px;
+    transform: translateX(-50%) translateY(-50%);
+
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 0 0 5px 5px rgb(184, 184, 184);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 100ms linear;
+}
+.hover {
+    width: 85px;
+    height: 85px;
+
+    background-color: rgb(73, 73, 73);
+    border: none;
+    box-shadow: 0 0 5px 5px rgb(73, 73, 73);
+
+    mix-blend-mode: difference;
+    transition: all 100ms linear;
+}
+.hover2 {
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    box-shadow: 0 0 5px 5px rgb(73, 73, 73);
+
+    transition: all 100ms linear;
+}
+
     /* for mobiles :*/
     /*
 @media only screen and (max-width: 1200px) {
