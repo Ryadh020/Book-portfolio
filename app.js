@@ -46,8 +46,9 @@ const instagram = document.querySelector(".instagram");
 const linkedIn = document.querySelector(".linkedIn");
 const gitHub = document.querySelector(".gitHub");
 
-// cursor:
+// alert window:
 const alert = document.querySelector(".alert") 
+const text = document.querySelector(".alertText") 
 
   // detect if the + butto is clicked or no:
 let Showen = false;
@@ -230,7 +231,27 @@ logoContainer.addEventListener("mouseout", ()=> {
     circle.addEventListener("mousemove", ()=> {
       circle2[index].style.bottom = "380px";
 			circle2[index].style.left = "-190px";
-				// show the alert 
+
+        // change text content
+			switch (index) {
+				case 0:
+          text.textContent = "ssssssssssssssssssss"
+          break;
+				case 1:
+          text.textContent = "rrrrrrrrrrrrrrrrrrrr"
+          break;
+				case 2:
+          text.textContent = "vvvvvvvvvvvvvvvvvvvvvvv"
+          break;
+				case 3:
+          text.textContent = "gggggggggggggggggggggg"
+          break;
+			
+				default:
+					break;
+      }
+
+      	// show the alert 
 			alert.style.top = "0px"
 
       cursor.className += " hover"
