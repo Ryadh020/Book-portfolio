@@ -1,5 +1,5 @@
 * {
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
     box-sizing: border-box;
 }
 body {
@@ -44,7 +44,7 @@ header {
 
 .logo-image {
     width: 90px;
-    height: 55px;
+    height: 65px;
 }
 
 .logo-name {
@@ -151,6 +151,10 @@ main {
 
     border: 1px rgba(110, 110, 110, 0.849) solid;
     border-radius: 50%;
+}
+.image {
+    width: 50px;
+    height: 50px;
 }
 .whiteCircle {
     border: 1px rgba(255, 255, 255, 0.849) solid;
