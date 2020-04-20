@@ -46,6 +46,9 @@ const instagram = document.querySelector(".instagram");
 const linkedIn = document.querySelector(".linkedIn");
 const gitHub = document.querySelector(".gitHub");
 
+// cursor:
+const alert = document.querySelector(".alert") 
+
   // detect if the + butto is clicked or no:
 let Showen = false;
   // detect the page pivoting:
@@ -226,14 +229,18 @@ logoContainer.addEventListener("mouseout", ()=> {
     
     circle.addEventListener("mousemove", ()=> {
       circle2[index].style.bottom = "380px";
-      circle2[index].style.left = "-190px";
+			circle2[index].style.left = "-190px";
+				// show the alert 
+			alert.style.top = "0px"
 
       cursor.className += " hover"
     })
 
     circle.addEventListener("mouseout", ()=> {
       circle2[index].style.bottom = "0px";
-      circle2[index].style.left = "180px";
+			circle2[index].style.left = "180px";
+				// hide the alert 
+			alert.style.top = "-15%"
 
       cursor.className = "cursor"
     })
