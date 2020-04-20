@@ -9,6 +9,7 @@ const pagesNumber = document.querySelector(".pagesNumber");
 const actualPage = document.querySelector(".actual");
   // Content:
 const scontent = document.querySelector(".content");
+const CirclesContainer = document.querySelector(".content2");
 
 const h1 = document.querySelector(".titleContainer");
 const stitle = document.getElementsByClassName("title");
@@ -26,9 +27,9 @@ let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
 // second content circles:
-let circles = document.querySelectorAll(".circles");
-let circle1 = document.querySelectorAll(".circle1");
-let circle2 = document.querySelectorAll(".circle2");
+let circles ;
+let circle1 ;
+let circle2 ;
 
 
 // Logo:
@@ -55,6 +56,31 @@ let Showen = false;
   // detect the page pivoting:
 let pivot = false;
 
+
+
+// fill the circles with data:
+(()=> {
+
+  competences.forEach(competence => {
+
+    let crcl = `
+      <div class="circles">
+        <div class="circle1">
+            <img class="image" src="${competence.pic}" alt="8" srcset="">
+        </div>
+        <div class="circle2"></div>
+      </div>
+    `
+
+    CirclesContainer.innerHTML += crcl
+  });
+
+    // second content circles:
+  circles = document.querySelectorAll(".circles");
+  circle1 = document.querySelectorAll(".circle1");
+  circle2 = document.querySelectorAll(".circle2");
+
+})()
 
   // blur the button when cliking the button:
 button.addEventListener("click", ()=> {
@@ -235,16 +261,16 @@ logoContainer.addEventListener("mouseout", ()=> {
         // change text content
 			switch (index) {
 				case 0:
-          text.textContent = "ssssssssssssssssssss"
+          text.textContent = competences[index].disc
           break;
 				case 1:
-          text.textContent = "rrrrrrrrrrrrrrrrrrrr"
+          text.textContent = competences[index].disc
           break;
 				case 2:
-          text.textContent = "vvvvvvvvvvvvvvvvvvvvvvv"
+          text.textContent = competences[index].disc
           break;
 				case 3:
-          text.textContent = "gggggggggggggggggggggg"
+          text.textContent = competences[index].disc
           break;
 			
 				default:
