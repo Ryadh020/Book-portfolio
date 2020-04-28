@@ -26,14 +26,6 @@ let thrd = document.querySelector("#thrd");
 let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
-// second content circles:
-
-circles = document.querySelectorAll(".circles");
-circles2 = document.querySelectorAll(".circles2");
-circle1 = document.querySelectorAll(".circle1");
-circle2 = document.querySelectorAll(".circle2");
-circle3 = document.querySelectorAll(".circle3");
-
 
 // Logo:
 const logoContainer = document.querySelector(".logo");
@@ -58,6 +50,72 @@ const text = document.querySelector(".alertText")
 let Showen = false;
   // detect the page pivoting:
 let pivot = false;
+
+
+(()=> {
+
+  let crcl = `
+  <div class="circles">
+  <div class="circle1">
+      <img class="image" src="${competences[0].pic}" alt="8" srcset="">
+  </div>
+  <div class="circle2"></div>
+</div>
+<div class="circles">
+  <div class="circle1">
+      <img class="image" src="${competences[1].pic}" alt="8" srcset="">
+  </div>
+  <div class="circle2"></div>
+</div>
+<div class="circles">
+  <div class="circle1">
+      <img class="image" src="${competences[2].pic}" alt="8" srcset="">
+  </div>
+  <div class="circle2"></div>
+</div>
+<div class="circles">
+  <div class="circle1">
+      <img class="image" src="${competences[3].pic}" alt="8" srcset="">
+  </div>
+  <div class="circle2"></div>
+</div>
+
+
+<div class="circles2">
+  <div class="circle1">
+          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  </div>
+  <div class="circle3"></div>
+</div>
+<div class="circles2">
+  <div class="circle1">
+          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  </div>
+  <div class="circle3"></div>
+</div>
+<div class="circles2">
+  <div class="circle1">
+          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  </div>
+  <div class="circle3"></div>
+</div>
+<div class="circles2">
+  <div class="circle1">
+          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  </div>
+  <div class="circle3"></div>
+</div>
+  `
+
+  CirclesContainer.innerHTML = crcl
+
+  circles = document.querySelectorAll(".circles");
+  circles2 = document.querySelectorAll(".circles2");
+  circle1 = document.querySelectorAll(".circle1");
+  circle2 = document.querySelectorAll(".circle2");
+  circle3 = document.querySelectorAll(".circle3");
+})()
+
 
 
   // blur the button when cliking the button:
