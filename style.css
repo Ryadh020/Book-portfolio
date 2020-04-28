@@ -1,5 +1,5 @@
 * {
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
     box-sizing: border-box;
 }
 body {
@@ -133,13 +133,24 @@ main {
 
     width: 50vw;
 }
-
 .circles {
+    display: block;
     width: 200px;
     height: 200px;
     padding: 10px 10px;
 
     overflow: hidden;
+}
+.circles2 {
+    display: none;
+    width: 200px;
+    height: 200px;
+    padding: 10px 10px;
+
+    overflow: hidden;
+}
+.hidden {
+    display: none;
 }
 .circle1 {
     width: 180px;
@@ -172,6 +183,31 @@ main {
     border-radius: 50%;
 
     transition: all 1000ms ease;
+}
+.circle3 {
+    position: relative;
+    bottom: 180px;
+    left: 0px;
+    
+    width: 180px;
+    height: 180px;
+
+    background-color: rgba(255, 0, 0, 0.26);
+    border-radius: 50%;
+
+    transition: all 300ms ease;
+}
+.circle3:hover {
+    position: relative;
+    bottom: 190px;
+    left: -10px;
+    
+    width: 180px;
+    height: 180px;
+
+    background-color: rgba(255, 0, 0, 0.26);
+    border-radius: 50%;
+
 }
 .blackCircle {
     background-image: linear-gradient(to right, #000000 0%, rgb(2, 2, 2) 100%);

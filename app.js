@@ -27,9 +27,12 @@ let ffth = document.querySelector("#ffth");
 let sxth = document.querySelector("#sxth");
 
 // second content circles:
-let circles ;
-let circle1 ;
-let circle2 ;
+
+circles = document.querySelectorAll(".circles");
+circles2 = document.querySelectorAll(".circles2");
+circle1 = document.querySelectorAll(".circle1");
+circle2 = document.querySelectorAll(".circle2");
+circle3 = document.querySelectorAll(".circle3");
 
 
 // Logo:
@@ -56,31 +59,6 @@ let Showen = false;
   // detect the page pivoting:
 let pivot = false;
 
-
-
-// fill the circles with data:
-(()=> {
-
-  competences.forEach(competence => {
-
-    let crcl = `
-      <div class="circles">
-        <div class="circle1">
-            <img class="image" src="${competence.pic}" alt="8" srcset="">
-        </div>
-        <div class="circle2"></div>
-      </div>
-    `
-
-    CirclesContainer.innerHTML += crcl
-  });
-
-    // second content circles:
-  circles = document.querySelectorAll(".circles");
-  circle1 = document.querySelectorAll(".circle1");
-  circle2 = document.querySelectorAll(".circle2");
-
-})()
 
   // blur the button when cliking the button:
 button.addEventListener("click", ()=> {
@@ -125,29 +103,24 @@ button.addEventListener("mouseout", ()=> {
 })
 
   // turn the page when cliking the button:
-  button.addEventListener("click", ()=> {
+  button.addEventListener("click", ()=> {  
     if (!pivot) {  // the first page
         // hide the text content:
-          for (var i = 0; i < stitle.length; i++) {
-            stitle[i].style.top = "108px";
-          }
-          for (var i = 0; i < frstline.length; i++) {
-            frstline[i].style.top = "60px";
-          }
+      for (var i = 0; i < stitle.length; i++) {
+        stitle[i].style.top = "108px";
+      }
+      for (var i = 0; i < frstline.length; i++) {
+        frstline[i].style.top = "60px";
+      }
+      circles.forEach(circle => {
+        circle.style.display = "none";
+      })
         // make page turning effect
       floatingPage.style.borderTopLeftRadius = "100%";
         // change text color
       menuButton.style.color = "white";
       socialMedia.style.color = "white"; 
       logoText.style.color = "white"; 
-        // change circles colors:
-      circle1.forEach(circle => {
-        circle.className += " whiteCircle"
-      });
-
-      circle2.forEach(circle => {
-        circle.className += " blackCircle"
-      });
         // animate the actual page counter:
       actualPage.style.left = "50px";
       pagesNumber.style.color = "white";
@@ -161,12 +134,9 @@ button.addEventListener("mouseout", ()=> {
         floatingPage.style.top = `${screen.width}%`;
           // change text content
         first.innerHTML = "What I Do ?";
-        second.innerHTML = "What I Know ?";
         frst.innerHTML = "create and edit  modern web sites and phone applications";
         scnd.innerHTML = "Improve web sites with  fresh user interfaces";
         thrd.innerHTML = "Build custom mobile applications for android/IOS ";
-        ffth.innerHTML = "HTML5/CSS3/JS";
-        sxth.innerHTML = "React/React native";
       }, 600);
       setTimeout(() => {
         // Show the text content:
@@ -178,6 +148,9 @@ button.addEventListener("mouseout", ()=> {
         frstline[i].style.color = "white";   // change the color
         frstline[i].style.top = "0px";  // show text
       }
+      circles2.forEach(circle => {
+        circle.style.display = "block";
+      })
     }, 1000);
       pivot = true;
 
@@ -189,18 +162,15 @@ button.addEventListener("mouseout", ()=> {
     for (var i = 0; i < frstline.length; i++) {
       frstline[i].style.top = "60px";
     }
+    circles2.forEach(circle => {
+      circle.style.display = "none";
+    })
       // pull the page to the top:
     floatingPage.style.top = `0px`;
     menuButton.style.color = "black";
     socialMedia.style.color = "black"; 
     logoText.style.color = "black";
       // change circles colors:
-    circle1.forEach(circle => {
-      circle.className = "circle1"
-    });
-    circle2.forEach(circle => {
-      circle.className = "circle2"
-    });
       // animate the actual page counter:
     actualPage.style.left = "50px";
     pagesNumber.style.color = "black";
@@ -214,12 +184,9 @@ button.addEventListener("mouseout", ()=> {
       floatingPage.style.borderTopLeftRadius = "0%";
         // change text content
       first.innerHTML = "Who am i ?"
-      second.innerHTML = "What i love ?"
       frst.innerHTML = "Web designer";
       scnd.innerHTML = "Based in Algeria";
       thrd.innerHTML = "Called Riyadh";
-      ffth.innerHTML = "learn new technologies and tools";
-      sxth.innerHTML = "create new things";
     }, 1000);
     setTimeout(() => {
       // Show the text content:
@@ -231,6 +198,9 @@ button.addEventListener("mouseout", ()=> {
       frstline[i].style.color = "black";   // change the color
       frstline[i].style.top = "0px";  // show text
     }
+    circles.forEach(circle => {
+      circle.style.display = "block";
+    })
   }, 1000);
       pivot = false;
     }
@@ -255,41 +225,46 @@ logoContainer.addEventListener("mouseout", ()=> {
   circles.forEach((circle, index) => {
     
     circle.addEventListener("mousemove", ()=> {
-      circle2[index].style.bottom = "380px";
-			circle2[index].style.left = "-190px";
 
-        // change text content
-			switch (index) {
-				case 0:
-          text.textContent = competences[index].disc
-          break;
-				case 1:
-          text.textContent = competences[index].disc
-          break;
-				case 2:
-          text.textContent = competences[index].disc
-          break;
-				case 3:
-          text.textContent = competences[index].disc
-          break;
-			
-				default:
-					break;
-      }
+        circle2[index].style.bottom = "380px";
+        circle2[index].style.left = "-190px";
+  
+          // change text content
+        switch (index) {
+          case 0:
+            text.textContent = competences[index].disc
+            break;
+          case 1:
+            text.textContent = competences[index].disc
+            break;
+          case 2:
+            text.textContent = competences[index].disc
+            break;
+          case 3:
+            text.textContent = competences[index].disc
+            break;
+        
+          default:
+            break;
+        }
+  
+          // show the alert 
+        alert.style.top = "0px"
+  
+        cursor.className += " hover"
 
-      	// show the alert 
-			alert.style.top = "0px"
-
-      cursor.className += " hover"
     })
 
     circle.addEventListener("mouseout", ()=> {
-      circle2[index].style.bottom = "0px";
-			circle2[index].style.left = "180px";
-				// hide the alert 
-			alert.style.top = "-15%"
 
-      cursor.className = "cursor"
+        circle2[index].style.bottom = "0px";
+        circle2[index].style.left = "180px";
+          // hide the alert 
+        alert.style.top = "-15%"
+  
+        cursor.className = "cursor"
+
+
     })
 
   });
