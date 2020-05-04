@@ -161,7 +161,7 @@ main {
     align-items: center;
 
     border: 1px rgba(110, 110, 110, 0.295) solid;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 .image {
     width: 50px;
@@ -180,7 +180,7 @@ main {
     margin-top: 10px;
 
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    border-radius: 50%;
+    border-radius: 20px;
 
     transition: all 1000ms ease;
 }
@@ -193,7 +193,7 @@ main {
     height: 180px;
 
     background-color: rgba(255, 0, 0, 0.26);
-    border-radius: 50%;
+    border-radius: 20px;
 
     transition: all 300ms ease;
 }
@@ -206,7 +206,7 @@ main {
     height: 180px;
 
     background-color: rgba(255, 0, 0, 0.26);
-    border-radius: 50%;
+    border-radius: 20px;
 
 }
 .blackCircle {

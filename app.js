@@ -56,55 +56,55 @@ let pivot = false;
 
   let crcl = `
   <div class="circles">
-  <div class="circle1">
-      <img class="image" src="${competences[0].pic}" alt="8" srcset="">
+    <div class="circle1">
+        <img class="image" src="${competences[0].pic}" alt="8" srcset="">
+    </div>
+    <div class="circle2"></div>
   </div>
-  <div class="circle2"></div>
-</div>
-<div class="circles">
-  <div class="circle1">
-      <img class="image" src="${competences[1].pic}" alt="8" srcset="">
+  <div class="circles">
+    <div class="circle1">
+        <img class="image" src="${competences[1].pic}" alt="8" srcset="">
+    </div>
+    <div class="circle2"></div>
   </div>
-  <div class="circle2"></div>
-</div>
-<div class="circles">
-  <div class="circle1">
-      <img class="image" src="${competences[2].pic}" alt="8" srcset="">
+  <div class="circles">
+    <div class="circle1">
+        <img class="image" src="${competences[2].pic}" alt="8" srcset="">
+    </div>
+    <div class="circle2"></div>
   </div>
-  <div class="circle2"></div>
-</div>
-<div class="circles">
-  <div class="circle1">
-      <img class="image" src="${competences[3].pic}" alt="8" srcset="">
+  <div class="circles">
+    <div class="circle1">
+        <img class="image" src="${competences[3].pic}" alt="8" srcset="">
+    </div>
+    <div class="circle2"></div>
   </div>
-  <div class="circle2"></div>
-</div>
 
 
-<div class="circles2">
-  <div class="circle1">
-          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  <div class="circles2">
+    <div class="circle1">
+            <img class="image" src="./Images/node.png" alt="8" srcset="">
+    </div>
+    <div class="circle3"></div>
   </div>
-  <div class="circle3"></div>
-</div>
-<div class="circles2">
-  <div class="circle1">
-          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  <div class="circles2">
+    <div class="circle1">
+            <img class="image" src="./Images/node.png" alt="8" srcset="">
+    </div>
+    <div class="circle3"></div>
   </div>
-  <div class="circle3"></div>
-</div>
-<div class="circles2">
-  <div class="circle1">
-          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  <div class="circles2">
+    <div class="circle1">
+            <img class="image" src="./Images/node.png" alt="8" srcset="">
+    </div>
+    <div class="circle3"></div>
   </div>
-  <div class="circle3"></div>
-</div>
-<div class="circles2">
-  <div class="circle1">
-          <img class="image" src="./Images/node.png" alt="8" srcset="">
+  <div class="circles2">
+    <div class="circle1">
+            <img class="image" src="./Images/node.png" alt="8" srcset="">
+    </div>
+    <div class="circle3"></div>
   </div>
-  <div class="circle3"></div>
-</div>
   `
 
   CirclesContainer.innerHTML = crcl
