@@ -61,61 +61,22 @@ let pivot = false;
 
 
 (()=> {
+  competences.forEach((circle, index)=> {
 
-  let crcl = `
-  <div class="circles">
-    <div class="circle1">
-        <img class="image" src="${competences[0].pic}" alt="8" srcset="">
+  CirclesContainer.innerHTML += `
+    <div class="circles">
+      <div class="circle1">
+          <img class="image" src="${competences[index].pic}" alt="8" srcset="">
+      </div>
+      <div class="circle2"></div>
     </div>
-    <div class="circle2"></div>
-  </div>
-  <div class="circles">
-    <div class="circle1">
-        <img class="image" src="${competences[1].pic}" alt="8" srcset="">
-    </div>
-    <div class="circle2"></div>
-  </div>
-  <div class="circles">
-    <div class="circle1">
-        <img class="image" src="${competences[2].pic}" alt="8" srcset="">
-    </div>
-    <div class="circle2"></div>
-  </div>
-  <div class="circles">
-    <div class="circle1">
-        <img class="image" src="${competences[3].pic}" alt="8" srcset="">
-    </div>
-    <div class="circle2"></div>
-  </div>
-
-
-  <div class="circles2">
-    <div class="circle1">
-            <img class="image" src="./Images/node.png" alt="8" srcset="">
-    </div>
-    <div class="circle3"></div>
-  </div>
-  <div class="circles2">
-    <div class="circle1">
-            <img class="image" src="./Images/node.png" alt="8" srcset="">
-    </div>
-    <div class="circle3"></div>
-  </div>
-  <div class="circles2">
-    <div class="circle1">
-            <img class="image" src="./Images/node.png" alt="8" srcset="">
-    </div>
-    <div class="circle3"></div>
-  </div>
-  <div class="circles2">
-    <div class="circle1">
-            <img class="image" src="./Images/node.png" alt="8" srcset="">
-    </div>
-    <div class="circle3"></div>
-  </div>
-  `
-
-  CirclesContainer.innerHTML = crcl
+    <div class="circles2">
+      <div class="circle1">
+              <img class="image" src="./Images/node.png" alt="8" srcset="">
+      </div>
+      <div class="circle3"></div>
+    </div>`
+  })
 
   circles = document.querySelectorAll(".circles");
   circles2 = document.querySelectorAll(".circles2");
