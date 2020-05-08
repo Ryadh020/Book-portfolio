@@ -42,7 +42,15 @@ const instagram = document.querySelector(".instagram");
 const linkedIn = document.querySelector(".linkedIn");
 const gitHub = document.querySelector(".gitHub");
 
-// alert window:
+// background videos:
+const videosContainer = document.querySelector(".videoBackGround") 
+
+const videoBackGround1 = document.querySelector(".videoBackGround1") 
+const videoBackGround2 = document.querySelector(".videoBackGround2") 
+const videoBackGround3 = document.querySelector(".videoBackGround3") 
+const videoBackGround4 = document.querySelector(".videoBackGround4") 
+
+// Alert:
 const alert = document.querySelector(".alert") 
 const text = document.querySelector(".alertText") 
 
@@ -282,7 +290,7 @@ logoContainer.addEventListener("mouseout", ()=> {
 /* for desktop */
   circles.forEach((circle, index) => {
     
-    circle.addEventListener("mousemove", ()=> {
+    circle.addEventListener("mouseover", ()=> {
 
         circle2[index].style.bottom = "380px";
         circle2[index].style.left = "-190px";
@@ -321,11 +329,46 @@ logoContainer.addEventListener("mouseout", ()=> {
         alert.style.top = "-15%"
   
         cursor.className = "cursor"
-
-
     })
-
   });
+
+
+  /* sencond page hover effect */
+  
+circles2.forEach((circle, index) => {
+
+  circle.addEventListener("mousemove", ()=> {
+
+      //change video:
+    switch (index) {
+      case 0:
+        videoBackGround1.style.visibility = "visible";
+        break;
+      case 1:
+        videoBackGround2.style.visibility = "visible";
+        break;
+      case 2:
+        videoBackGround3.style.visibility = "visible";
+        break;
+      case 3:
+        videoBackGround4.style.visibility = "visible";
+        break; 
+      default:
+        break;
+    }
+  })
+
+  circle.addEventListener("mouseout", ()=> {
+      // hide video
+    videoBackGround1.style.visibility = "hidden";
+    videoBackGround2.style.visibility = "hidden";
+    videoBackGround3.style.visibility = "hidden";
+    videoBackGround4.style.visibility = "hidden";
+})
+});
+
+
+
   
 /* social media hovering effect */
 somed.forEach(item => {
