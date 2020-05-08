@@ -1,5 +1,5 @@
 * {
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
     box-sizing: border-box;
 }
 body {
@@ -151,6 +151,10 @@ main {
     justify-content: space-around;
 
     width: 50vw;
+    height: 420px;
+
+    overflow: scroll;
+    border-bottom: red 35px solid;
 }
 .circles {
     display: block;
