@@ -78,6 +78,10 @@ let pivot = false;
     </div>`
   })
 
+  CirclesContainer.innerHTML += `
+    <div class="borderBottom"></div>
+  `
+
   circles = document.querySelectorAll(".circles");
   circles2 = document.querySelectorAll(".circles2");
   circle1 = document.querySelectorAll(".circle1");
