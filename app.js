@@ -170,9 +170,9 @@ button.addEventListener("mouseout", ()=> {
         floatingPage.style.top = `${screen.width}%`;
           // change text content
         first.innerHTML = "What I Do ?";
-        frst.innerHTML = "create and edit  modern web sites and phone applications";
-        scnd.innerHTML = "Improve web sites with  fresh user interfaces";
-        thrd.innerHTML = "Build custom mobile applications for android/IOS ";
+        frst.innerHTML = "create and edit";
+        scnd.innerHTML = "Improve web ";
+        thrd.innerHTML = "Build custom  ";
       }, 600);
       setTimeout(() => {
         // Show the text content:
@@ -221,10 +221,10 @@ button.addEventListener("mouseout", ()=> {
         // make the turned page effect:
       floatingPage.style.borderTopLeftRadius = "0%";
         // change text content
-      first.innerHTML = "Who am i ?"
-      frst.innerHTML = "Web designer";
-      scnd.innerHTML = "Based in Algeria";
-      thrd.innerHTML = "Called Riyadh";
+      first.innerHTML = "lorem ipsum"
+      frst.innerHTML = "blabla lorem ipsum";
+      scnd.innerHTML = "lorem ipsum";
+      thrd.innerHTML = "blabla blabla";
     }, 1000);
     setTimeout(() => {
       // Show the text content:
