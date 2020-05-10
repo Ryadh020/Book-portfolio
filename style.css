@@ -161,12 +161,13 @@ main {
 /* border bottom effect */
 .borderBottom {
     position: fixed;
+    visibility: hidden;
     top: 500px;
 
     width: 48vw;
     height: 30px;
 
-    background: linear-gradient(to bottom , rgba(145, 145, 145, 0), rgb(226, 226, 226));
+    background: linear-gradient(to bottom , rgba(143, 143, 143, 0), rgb(51, 51, 51));
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 

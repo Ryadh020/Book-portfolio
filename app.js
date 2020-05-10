@@ -62,7 +62,6 @@ let pivot = false;
 
 (()=> {
   competences.forEach((circle, index)=> {
-
   CirclesContainer.innerHTML += `
     <div class="circles">
       <div class="circle1">
@@ -70,12 +69,17 @@ let pivot = false;
       </div>
       <div class="circle2"></div>
     </div>
-    <div class="circles2">
-      <div class="circle1">
-              <img class="image" src="./Images/node.png" alt="8" srcset="">
-      </div>
-      <div class="circle3"></div>
-    </div>`
+  `
+  })
+
+  work.forEach((circle, index)=> {
+    CirclesContainer.innerHTML += `
+      <div class="circles2">
+        <div class="circle1">
+                <img class="image" src="${work[index].pic}" alt="8" srcset="">
+        </div>
+        <div class="circle3"></div>
+      </div>`
   })
 
   CirclesContainer.innerHTML += `
@@ -87,6 +91,7 @@ let pivot = false;
   circle1 = document.querySelectorAll(".circle1");
   circle2 = document.querySelectorAll(".circle2");
   circle3 = document.querySelectorAll(".circle3");
+  borderBottom = document.querySelector(".borderBottom");
 })()
 
 
@@ -182,6 +187,7 @@ button.addEventListener("mouseout", ()=> {
       circles2.forEach(circle => {
         circle.style.display = "block";
       })
+      borderBottom.style.visibility = "visible";
     }, 1000);
       pivot = true;
 
@@ -196,6 +202,7 @@ button.addEventListener("mouseout", ()=> {
     circles2.forEach(circle => {
       circle.style.display = "none";
     })
+    borderBottom.style.visibility = "hidden";
       // pull the page to the top:
     floatingPage.style.top = `0px`;
     menuButton.style.color = "black";
