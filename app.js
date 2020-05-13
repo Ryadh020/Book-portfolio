@@ -49,6 +49,11 @@ const videoBackGround1 = document.querySelector(".videoBackGround1")
 const videoBackGround2 = document.querySelector(".videoBackGround2") 
 const videoBackGround3 = document.querySelector(".videoBackGround3") 
 const videoBackGround4 = document.querySelector(".videoBackGround4") 
+const videoBackGround5 = document.querySelector(".videoBackGround5") 
+const videoBackGround6 = document.querySelector(".videoBackGround6") 
+const videoBackGround7 = document.querySelector(".videoBackGround7") 
+const videoBackGround8 = document.querySelector(".videoBackGround8") 
+const videoBackGround9 = document.querySelector(".videoBackGround9") 
 
 // Alert:
 const alert = document.querySelector(".alert") 
@@ -325,6 +330,21 @@ circles2.forEach((circle, index) => {
       case 3:
         videoBackGround4.style.visibility = "visible";
         break; 
+      case 4:
+        videoBackGround5.style.visibility = "visible";
+        break;
+      case 5:
+        videoBackGround6.style.visibility = "visible";
+        break;
+      case 6:
+        videoBackGround7.style.visibility = "visible";
+        break;
+      case 7:
+        videoBackGround8.style.visibility = "visible";
+        break;
+      case 8:
+        videoBackGround9.style.visibility = "visible";
+        break;
       default:
         break;
     }
@@ -336,6 +356,11 @@ circles2.forEach((circle, index) => {
     videoBackGround2.style.visibility = "hidden";
     videoBackGround3.style.visibility = "hidden";
     videoBackGround4.style.visibility = "hidden";
+    videoBackGround5.style.visibility = "hidden";
+    videoBackGround6.style.visibility = "hidden";
+    videoBackGround7.style.visibility = "hidden";
+    videoBackGround8.style.visibility = "hidden";
+    videoBackGround9.style.visibility = "hidden";
 })
 });
 
