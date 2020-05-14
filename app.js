@@ -83,7 +83,14 @@ let pivot = false;
         <div class="circle1">
                 <img class="image" src="${work[index].pic}" alt="8" srcset="">
         </div>
-        <div class="circle3"></div>
+        <div class="circle3">
+          <div class="code center">
+            <a href="http://">Source Code</a>
+          </div>
+          <div class="live center">
+            <a href="http://">Live</a>
+          </div>
+        </div>
       </div>`
   })
 
