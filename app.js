@@ -188,13 +188,24 @@ button.addEventListener("mouseout", ()=> {
       }, 600);
       setTimeout(() => {
         // Show the text content:
-      for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.color = "white";    // change the color
-        stitle[i].style.top = "0px";  // show text
-      }
-      for (var i = 0; i < frstline.length; i++) {
-        frstline[i].style.color = "white";   // change the color
-        frstline[i].style.top = "0px";  // show text
+      if(screen.width <= 600) {
+        for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.color = "white";    // change the color
+          stitle[i].style.top = "-30px";  // show text
+        }
+        for (var i = 0; i < frstline.length; i++) {
+          frstline[i].style.color = "white";   // change the color
+          frstline[i].style.top = "-25px";  // show text
+        }
+      }else {
+        for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.color = "white";    // change the color
+          stitle[i].style.top = "0px";  // show text
+        }
+        for (var i = 0; i < frstline.length; i++) {
+          frstline[i].style.color = "white";   // change the color
+          frstline[i].style.top = "5px";  // show text
+        }
       }
       circles2.forEach(circle => {
         circle.style.display = "block";
@@ -240,13 +251,24 @@ button.addEventListener("mouseout", ()=> {
     }, 1000);
     setTimeout(() => {
       // Show the text content:
-    for (var i = 0; i < stitle.length; i++) {
-      stitle[i].style.color = "black";    // change the color
-      stitle[i].style.top = "0px";  // show text
-    }
-    for (var i = 0; i < frstline.length; i++) {
-      frstline[i].style.color = "black";   // change the color
-      frstline[i].style.top = "0px";  // show text
+    if(screen.width <= 600) {
+      for (var i = 0; i < stitle.length; i++) {
+        stitle[i].style.color = "black";    // change the color
+        stitle[i].style.top = "-30px";  // show text
+      }
+      for (var i = 0; i < frstline.length; i++) {
+        frstline[i].style.color = "black";   // change the color
+        frstline[i].style.top = "-25px";  // show text
+      }
+      }else {
+        for (var i = 0; i < stitle.length; i++) {
+        stitle[i].style.color = "black";    // change the color
+        stitle[i].style.top = "0px";  // show text
+      }
+      for (var i = 0; i < frstline.length; i++) {
+        frstline[i].style.color = "black";   // change the color
+        frstline[i].style.top = "5px";  // show text
+      }
     }
     circles.forEach(circle => {
       circle.style.display = "block";

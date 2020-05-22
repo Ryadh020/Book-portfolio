@@ -104,6 +104,8 @@ header {
 /* content part - main- */
 main {
     height: 76vh;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
 
@@ -335,7 +337,6 @@ footer {
     justify-content: space-around;
     align-items: center;
 
-    width: 20%;
     height: 45px;
 
     transition: all 0.5s ease;
@@ -350,6 +351,13 @@ footer {
 .hovered {
     width: 45px;
     height: 45px;
+}
+.top {
+    display: none;
+    width: 40%;
+}
+.bottom {
+    width: 20%;
 }
  /* cursor styling*/
  .cursor {
@@ -547,118 +555,195 @@ footer {
     }
 }
 
-/*
-@media only screen and (max-width: 920px) and (min-width: 880px){
-/* text content*/
-/*
-.title {
-    position: relative;
-    top: 0px;
+/* for mobile */
+@media only screen and (max-width: 600px) {
+    header {
+        height: 15vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
     
-    transition: all 0.6s ease;
-    font-size: 2rem;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-.line {
-    position: relative;
-    top: 0px;
+        z-index: +5;
+    }
+
+/* resize lodo*/
+    .logo-image {
+        width: 100px;
+        height: 75px;
+    }
+
+/* replace button with socialMedia*/
+    .top {
+        display: flex;
+    }
+    /*.Button {
+        display: none;
+    }*/
+
+/* resize the main content */
+    main {
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     
-    transition: all 0.6s ease;
-    font-size: 1.7rem;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-}
-@media only screen and (max-width: 880px) {
-.Button {
-    position: relative;
-    top: -94%;
-    left: 78%;
-    overflow: hidden;
+        padding: 15px 0;
     
-    border-style: none;
-    background-color: transparent;
-    color: green;
-    outline: none;
-    font-size: 0.1rem;
-}
-/* content*/
-/*
-.content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: -108%;
-
-    height: 70%;
-    margin: 30px;
-}
-.title {
-    position: relative;
-    top: 0px;
+        color: black;
     
-    transition: all 0.6s ease;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-.line {
-    position: relative;
-    top: 0px;
+        z-index: +5;
+    }
+/* minimize first part of content */
+    .left{
+        justify-content: center;
+        height: 200px;
+        width: 82vw;
+    }
+
+    .titleContainer {
+        overflow: hidden;
+    }
+    .title {
+        position: relative;
+        top: -30px;
+
+        transition: all 0.6s ease;
+        font-size: 3rem;
+        font-weight: bolder;
+        font-family: 'Poiret One', cursive;
+    }
+
+    .fline {
+        width: 100;
+        overflow: hidden;
+    }
+    .line {
+        position: relative;
+        top: -25px;
+
+        transition: all 0.6s ease;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family: 'Poiret One', cursive;
+    }
+/* spand the second content */
+    .content2 {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     
-    transition: all 0.6s ease;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    font-family: 'Poiret One', cursive;
-}
-/* logo */
-/*
-.logo {
-    position: absolute;
-    top: 2.8%;
-    left: 4.7%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 180px;
-    height: 60px;
-
-    color: white;
-}
-.logo-image {
-    width: 85px;
-    height: 60px;
-
-    cursor: pointer;
-}
-
-.logo-name {
-    height: 20px;
-
-    overflow: hidden;
-}
-.logo-name-text {
-    position: relative;
-    top: 0px;
+        width: 98vw;
+        height: 390px;
     
-    transition: all 0.3s ease;
-}
+        overflow: scroll;
+        -ms-overflow-style: none;
+        overflow-x: hidden;
+    }
 
-/* page numbers*/
-/*
-.pagesNumber {
-    display: flex;
-    flex-direction: row;
-    width: 9%;
+    .circles {
+        display: block;
+        width: 45vw;
+        height: 150px;
+    
+        overflow: hidden;
+    }
+    .circle1 {
+        width: 39vw;
+        height: 130px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        border: 1px rgba(110, 110, 110, 0.295) solid;
+        border-radius: 20px;
+    }
+    .image {
+        width: 40px;
+        height: 40px;
+    }
+    .whiteCircle {
+        border: 1px rgba(255, 255, 255, 0.849) solid;
+    }
+    .circle2 {
+        position: relative;
+        bottom: 0px;
+        left: 150px;
+        
+        width: 39vw;
+        height: 130px;
+        margin-top: 10px;
+    
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        border-radius: 20px;
+    
+        transition: all 1000ms ease;
+    }
 
-    position: relative;
-    top: -20%;
-    left: 85%;
 
-    color: black;
-    transition: all 1s ease;
-    overflow: hidden;
-    z-index: 5;
+    .circles2 {
+        display: none;
+        width: 45vw;
+        height: 150px;
+        padding: 10px 10px;
+    
+        overflow: hidden;
+    }
+    .circle3 {
+        position: relative;
+        bottom: 150px;
+        left: 0px;
+        
+        width: 39vw;
+        height: 130px;
+    
+        opacity: 0;
+    
+        border-radius: 20px;
+    
+        transition: all 300ms ease;
+    }
+    .circle3:hover {
+        bottom: 132px;
+        left: -2px;
+
+        opacity: 1;
+
+        background-color: black;
+        cursor: pointer;
+    }
+    .code {
+        width: 130px;
+        height: 65px;
+    
+        background-color: rgba(0, 0, 0, 0.445);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom: #ffffff 2px solid;
+    }
+    .live {
+        width: 130px;
+        height: 64px;
+    
+        background-color: rgba(0, 0, 0, 0.445);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+/* hide the footer*/
+    footer {
+        height: 0vh;
+    }
+    .pagesNumber {
+        display: none;
+    }
+    .bottom {
+        display: none;
+    }
+/* replace the shaddow*/
+.borderBottom {
+    display: none;
+
 }
 }
