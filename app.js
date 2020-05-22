@@ -2,8 +2,8 @@
 const Book = document.querySelector(".Book");
 const floatingPage = document.querySelector(".floatingPage");
   // Butttons
-const button = document.querySelector(".Button");
-const menuButton = document.querySelector(".menuButton");
+const buttons = document.querySelectorAll(".Button");
+const menuButtons = document.querySelectorAll(".menuButton");
   // Pages Number (counter):
 const pagesNumber = document.querySelector(".pagesNumber");
 const actualPage = document.querySelector(".actual");
@@ -109,50 +109,122 @@ let pivot = false;
 
 
   // blur the button when cliking the button:
-button.addEventListener("click", ()=> {
-  if (!pivot) {
-      // blur the button :
-    menuButton.style.fontSize = "0.1rem";
-    menuButton.style.opacity = "0";
-    setTimeout(() => {
-      menuButton.innerHTML = "back";
-      menuButton.style.opacity = "1";
-      menuButton.style.fontSize = "1rem";
-    }, 800);
-  }else {
-      // blur the button :
-    menuButton.style.fontSize = "0.1rem";
-    menuButton.style.opacity = "0";
-    setTimeout(() => {
-      menuButton.innerHTML = "next";
-      menuButton.style.opacity = "1";
-      menuButton.style.fontSize = "1rem";
-    }, 800);
-  }
-})
+buttons.forEach(button => {
+  button.addEventListener("click", ()=> {
+    menuButtons.forEach(menuButton => {
+      if (!pivot) {
+          // blur the button :
+        menuButton.style.fontSize = "0.1rem";
+        menuButton.style.opacity = "0";
+        setTimeout(() => {
+          menuButton.innerHTML = "back";
+          menuButton.style.opacity = "1";
+          menuButton.style.fontSize = "1rem";
+        }, 800);
+      }else {
+          // blur the button :
+        menuButton.style.fontSize = "0.1rem";
+        menuButton.style.opacity = "0";
+        setTimeout(() => {
+          menuButton.innerHTML = "next";
+          menuButton.style.opacity = "1";
+          menuButton.style.fontSize = "1rem";
+        }, 800);
+      }
+    });
+  }) 
+});
+
+
   // make the magnet effect to the page:
-button.addEventListener("mouseover", ()=> {
-  if (!pivot) {
-    // make a page pivot magnet :
-  floatingPage.style.borderTopLeftRadius = "15%";
-}else {
-    // make a page pivot magnet :
-  floatingPage.style.top = `100%`;
-}
-})
-button.addEventListener("mouseout", ()=> {
-  if (!pivot) {
-    // make a page pivot magnet :
-  floatingPage.style.borderTopLeftRadius = "0%";
-}else {
-    // make a page pivot magnet :
+buttons.forEach(button => {
+  button.addEventListener("mouseover", ()=> {
+    if (!pivot) {
+      // make a page pivot magnet :
+    floatingPage.style.borderTopLeftRadius = "15%";
+  }else {
+      // make a page pivot magnet :
     floatingPage.style.top = `100%`;
-}
-})
+  }
+  })
+  button.addEventListener("mouseout", ()=> {
+    if (!pivot) {
+      // make a page pivot magnet :
+    floatingPage.style.borderTopLeftRadius = "0%";
+  }else {
+      // make a page pivot magnet :
+      floatingPage.style.top = `100%`;
+  }
+  })
+});
+
 
   // turn the page when cliking the button:
-  button.addEventListener("click", ()=> {  
-    if (!pivot) {  // the first page
+  buttons.forEach(button => {
+    button.addEventListener("click", ()=> {  
+      if (!pivot) {  // the first page
+          // hide the text content:
+        for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.top = "108px";
+        }
+        for (var i = 0; i < frstline.length; i++) {
+          frstline[i].style.top = "60px";
+        }
+        circles.forEach(circle => {
+          circle.style.display = "none";
+        })
+          // make page turning effect
+        floatingPage.style.borderTopLeftRadius = "100%";
+          // change text color
+        //menuButton.style.color = "white";
+        socialMedia.style.color = "white"; 
+        logoText.style.color = "white"; 
+          // animate the actual page counter:
+        actualPage.style.left = "50px";
+        pagesNumber.style.color = "white";
+        setTimeout(() => {
+          actualPage.style.left = "0px";
+          // change the page number:
+          actualPage.innerHTML = "2";
+        }, 1000);
+        setTimeout(() => {
+            // put the turned page to the bottom
+          floatingPage.style.top = `${screen.width}%`;
+            // change text content
+          first.innerHTML = "What I Do ?";
+          frst.innerHTML = "create and edit";
+          scnd.innerHTML = "Improve web ";
+          thrd.innerHTML = "Build custom  ";
+        }, 600);
+        setTimeout(() => {
+          // Show the text content:
+        if(screen.width <= 600) {
+          for (var i = 0; i < stitle.length; i++) {
+            stitle[i].style.color = "white";    // change the color
+            stitle[i].style.top = "-30px";  // show text
+          }
+          for (var i = 0; i < frstline.length; i++) {
+            frstline[i].style.color = "white";   // change the color
+            frstline[i].style.top = "-25px";  // show text
+          }
+        }else {
+          for (var i = 0; i < stitle.length; i++) {
+            stitle[i].style.color = "white";    // change the color
+            stitle[i].style.top = "0px";  // show text
+          }
+          for (var i = 0; i < frstline.length; i++) {
+            frstline[i].style.color = "white";   // change the color
+            frstline[i].style.top = "5px";  // show text
+          }
+        }
+        circles2.forEach(circle => {
+          circle.style.display = "block";
+        })
+        borderBottom.style.visibility = "visible";
+      }, 1000);
+        pivot = true;
+  
+      } else { // the second page:
         // hide the text content:
       for (var i = 0; i < stitle.length; i++) {
         stitle[i].style.top = "108px";
@@ -160,124 +232,64 @@ button.addEventListener("mouseout", ()=> {
       for (var i = 0; i < frstline.length; i++) {
         frstline[i].style.top = "60px";
       }
-      circles.forEach(circle => {
+      circles2.forEach(circle => {
         circle.style.display = "none";
       })
-        // make page turning effect
-      floatingPage.style.borderTopLeftRadius = "100%";
-        // change text color
-      menuButton.style.color = "white";
-      socialMedia.style.color = "white"; 
-      logoText.style.color = "white"; 
+      borderBottom.style.visibility = "hidden";
+        // pull the page to the top:
+      floatingPage.style.top = `0px`;
+      //menuButton.style.color = "black";
+      socialMedia.style.color = "black"; 
+      logoText.style.color = "black";
+        // change circles colors:
         // animate the actual page counter:
       actualPage.style.left = "50px";
-      pagesNumber.style.color = "white";
+      pagesNumber.style.color = "black";
       setTimeout(() => {
         actualPage.style.left = "0px";
-        // change the page number:
-        actualPage.innerHTML = "2";
+          // change the page number:
+        actualPage.innerHTML = "1";
       }, 1000);
       setTimeout(() => {
-          // put the turned page to the bottom
-        floatingPage.style.top = `${screen.width}%`;
+          // make the turned page effect:
+        floatingPage.style.borderTopLeftRadius = "0%";
           // change text content
-        first.innerHTML = "What I Do ?";
-        frst.innerHTML = "create and edit";
-        scnd.innerHTML = "Improve web ";
-        thrd.innerHTML = "Build custom  ";
-      }, 600);
+        first.innerHTML = "lorem ipsum"
+        frst.innerHTML = "blabla lorem ipsum";
+        scnd.innerHTML = "lorem ipsum";
+        thrd.innerHTML = "blabla blabla";
+      }, 1000);
       setTimeout(() => {
         // Show the text content:
       if(screen.width <= 600) {
         for (var i = 0; i < stitle.length; i++) {
-          stitle[i].style.color = "white";    // change the color
+          stitle[i].style.color = "black";    // change the color
           stitle[i].style.top = "-30px";  // show text
         }
         for (var i = 0; i < frstline.length; i++) {
-          frstline[i].style.color = "white";   // change the color
+          frstline[i].style.color = "black";   // change the color
           frstline[i].style.top = "-25px";  // show text
         }
-      }else {
-        for (var i = 0; i < stitle.length; i++) {
-          stitle[i].style.color = "white";    // change the color
+        }else {
+          for (var i = 0; i < stitle.length; i++) {
+          stitle[i].style.color = "black";    // change the color
           stitle[i].style.top = "0px";  // show text
         }
         for (var i = 0; i < frstline.length; i++) {
-          frstline[i].style.color = "white";   // change the color
+          frstline[i].style.color = "black";   // change the color
           frstline[i].style.top = "5px";  // show text
         }
       }
-      circles2.forEach(circle => {
+      circles.forEach(circle => {
         circle.style.display = "block";
       })
-      borderBottom.style.visibility = "visible";
     }, 1000);
-      pivot = true;
+        pivot = false;
+      }
+    })  
+  });
 
-    } else { // the second page:
-      // hide the text content:
-    for (var i = 0; i < stitle.length; i++) {
-      stitle[i].style.top = "108px";
-    }
-    for (var i = 0; i < frstline.length; i++) {
-      frstline[i].style.top = "60px";
-    }
-    circles2.forEach(circle => {
-      circle.style.display = "none";
-    })
-    borderBottom.style.visibility = "hidden";
-      // pull the page to the top:
-    floatingPage.style.top = `0px`;
-    menuButton.style.color = "black";
-    socialMedia.style.color = "black"; 
-    logoText.style.color = "black";
-      // change circles colors:
-      // animate the actual page counter:
-    actualPage.style.left = "50px";
-    pagesNumber.style.color = "black";
-    setTimeout(() => {
-      actualPage.style.left = "0px";
-        // change the page number:
-      actualPage.innerHTML = "1";
-    }, 1000);
-    setTimeout(() => {
-        // make the turned page effect:
-      floatingPage.style.borderTopLeftRadius = "0%";
-        // change text content
-      first.innerHTML = "lorem ipsum"
-      frst.innerHTML = "blabla lorem ipsum";
-      scnd.innerHTML = "lorem ipsum";
-      thrd.innerHTML = "blabla blabla";
-    }, 1000);
-    setTimeout(() => {
-      // Show the text content:
-    if(screen.width <= 600) {
-      for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.color = "black";    // change the color
-        stitle[i].style.top = "-30px";  // show text
-      }
-      for (var i = 0; i < frstline.length; i++) {
-        frstline[i].style.color = "black";   // change the color
-        frstline[i].style.top = "-25px";  // show text
-      }
-      }else {
-        for (var i = 0; i < stitle.length; i++) {
-        stitle[i].style.color = "black";    // change the color
-        stitle[i].style.top = "0px";  // show text
-      }
-      for (var i = 0; i < frstline.length; i++) {
-        frstline[i].style.color = "black";   // change the color
-        frstline[i].style.top = "5px";  // show text
-      }
-    }
-    circles.forEach(circle => {
-      circle.style.display = "block";
-    })
-  }, 1000);
-      pivot = false;
-    }
-  })
-
+  
 //Logo sign effect (show and hide name when hovernig logo):
 
 logoContainer.addEventListener("mouseover", ()=> {

@@ -85,6 +85,8 @@ header {
 /* wraper button*/
 .Button {
     z-index: +5;
+    border: 1px black solid;
+    border-radius: 15px;
 }
 .menuButton {
     border-style: none;
@@ -98,6 +100,12 @@ header {
     font-size: 1rem;
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
+}
+.head {
+    display: block;
+}
+.float {
+    display: none;
 }
 /*main section */
 
@@ -565,6 +573,16 @@ footer {
     
         z-index: +5;
     }
+/* show the pivoting button */
+.head {
+    display: none;
+}
+.float {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+}
 
 /* resize lodo*/
     .logo-image {
@@ -576,22 +594,17 @@ footer {
     .top {
         display: flex;
     }
-    /*.Button {
-        display: none;
-    }*/
 
 /* resize the main content */
     main {
         height: 85vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-    
-        padding: 15px 0;
+        padding: 0;
     
         color: black;
-    
         z-index: +5;
     }
 /* minimize first part of content */
