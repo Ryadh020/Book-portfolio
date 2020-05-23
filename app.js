@@ -382,45 +382,56 @@ logoContainer.addEventListener("mouseout", ()=> {
 circles2.forEach((circle, index) => {
 
   circle.addEventListener("mousemove", ()=> {
-      // show buttons
-    circle3.forEach(circle => {
-      circle.style.display = "block";
-    });
-      //change video:
-    switch (index) {
-      case 0:
-        videoBackGround1.style.visibility = "visible";
-        break;
-      case 1:
-        videoBackGround2.style.visibility = "visible";
-        break;
-      case 2:
-        videoBackGround3.style.visibility = "visible";
-        break;
-      case 3:
-        videoBackGround4.style.visibility = "visible";
-        break; 
-      case 4:
-        videoBackGround5.style.visibility = "visible";
-        break;
-      case 5:
-        videoBackGround6.style.visibility = "visible";
-        break;
-      case 6:
-        videoBackGround7.style.visibility = "visible";
-        break;
-      case 7:
-        videoBackGround8.style.visibility = "visible";
-        break;
-      case 8:
-        videoBackGround9.style.visibility = "visible";
-        break;
-      default:
-        break;
-    }
+      //change video & show buttons:
+      setTimeout(() => {
+        switch (index) {
+          case 0:
+            circle3[0].style.display = "block";
+            videoBackGround1.style.visibility = "visible";
+            break;
+          case 1:
+            circle3[1].style.display = "block";
+            videoBackGround2.style.visibility = "visible";
+            break;
+          case 2:
+            circle3[2].style.display = "block";
+            videoBackGround3.style.visibility = "visible";
+            break;
+          case 3:
+            circle3[3].style.display = "block";
+            videoBackGround4.style.visibility = "visible";
+            break; 
+          case 4:
+            circle3[4].style.display = "block";
+            videoBackGround5.style.visibility = "visible";
+            break;
+          case 5:
+            circle3[5].style.display = "block";
+            videoBackGround6.style.visibility = "visible";
+            break;
+          case 6:
+            circle3[6].style.display = "block";
+            videoBackGround7.style.visibility = "visible";
+            break;
+          case 7:
+            circle3[7].style.display = "block";
+            videoBackGround8.style.visibility = "visible";
+            break;
+          case 8:
+            circle3[8].style.display = "block";
+            videoBackGround9.style.visibility = "visible";
+            break;
+          default:
+            break;
+        }
+      }, 10);
   })
 
   circle.addEventListener("mouseout", ()=> {
+      // hide buttons: 
+    circle3.forEach(circle => {
+      circle.style.display = "none";
+    });
       // hide video
     videoBackGround1.style.visibility = "hidden";
     videoBackGround2.style.visibility = "hidden";
@@ -431,12 +442,10 @@ circles2.forEach((circle, index) => {
     videoBackGround7.style.visibility = "hidden";
     videoBackGround8.style.visibility = "hidden";
     videoBackGround9.style.visibility = "hidden";
-})
+  })
 });
 
 
-
-  
 /* social media hovering effect */
 somed.forEach(item => {
   item.addEventListener("mousemove", ()=> {
