@@ -176,7 +176,9 @@ buttons.forEach(button => {
           // make page turning effect
         floatingPage.style.borderTopLeftRadius = "100%";
           // change text color
-        //menuButton.style.color = "white";
+        menuButtons.forEach(menuButton => {
+          menuButton.style.color = "white";
+        });
         socialMedia.style.color = "white"; 
         logoText.style.color = "white"; 
           // animate the actual page counter:
@@ -238,7 +240,9 @@ buttons.forEach(button => {
       borderBottom.style.visibility = "hidden";
         // pull the page to the top:
       floatingPage.style.top = `0px`;
-      //menuButton.style.color = "black";
+      menuButtons.forEach(menuButton => {
+        menuButton.style.color = "black";
+      });
       socialMedia.style.color = "black"; 
       logoText.style.color = "black";
         // change circles colors:
@@ -342,9 +346,6 @@ logoContainer.addEventListener("mouseout", ()=> {
           }, 2000);
         }else {
           alert.style.top = "0px"
-          setTimeout(() => {
-            alert.style.top = "-15px"
-          }, 2000);
         }
   
         cursor.className += " hover"
@@ -356,11 +357,7 @@ logoContainer.addEventListener("mouseout", ()=> {
         circle2[index].style.bottom = "0px";
         circle2[index].style.left = "180px";
           // hide the alert 
-        if(screen.width <= 600) {
-          alert.style.top = "50%"
-        }else {
           alert.style.top = "-15%"
-        }
   
         cursor.className = "cursor"
     })
