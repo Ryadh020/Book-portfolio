@@ -1,4 +1,9 @@
   // Elemnts:
+  // fullscreen :
+const introPage = document.querySelector(".intro");
+const fullscreenButton = document.querySelector(".fullscreenButton");
+const fullscreenOut = document.querySelector(".fullscreenOut");
+  //pages:
 const Book = document.querySelector(".Book");
 const floatingPage = document.querySelector(".floatingPage");
   // Butttons
@@ -64,7 +69,7 @@ let Showen = false;
   // detect the page pivoting:
 let pivot = false;
 
-
+// fill the page content:
 (()=> {
   competences.forEach((circle, index)=> {
   CirclesContainer.innerHTML += `
@@ -106,7 +111,15 @@ let pivot = false;
   borderBottom = document.querySelector(".borderBottom");
 })()
 
+// get fullscreen:
+function goFullScreen() {
+  // hide intro page
+  introPage.style.display = "none"
+  // show a new fulscreen on/off buttons:
+  fullscreenOut.style.display = "block"
+}
 
+fullscreenButton.addEventListener("click", goFullScreen)
 
   // blur the button when cliking the button:
 buttons.forEach(button => {
@@ -369,7 +382,10 @@ logoContainer.addEventListener("mouseout", ()=> {
 circles2.forEach((circle, index) => {
 
   circle.addEventListener("mousemove", ()=> {
-
+      // show buttons
+    circle3.forEach(circle => {
+      circle.style.display = "block";
+    });
       //change video:
     switch (index) {
       case 0:

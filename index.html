@@ -102,10 +102,44 @@
         <div class="alert  row">
             <p class="line alertText"> with latest node.js technologies we make robust web services</p>
         </div> 
+
+
+        <div class="intro fullScreen center column">
+            <img src="./Images/happy-dev.png" style="width: 45px;height: 45px;">
+            <button class="fullscreenButton" onclick="openFullscreen();">Know me</button>
+        </div>
+        <button class="fullscreenOut" onclick="closeFullscreen();">ok, bye</button>
         
-        
-        
+      
 <script src="DB.js"></script>
 <script src="app.js"></script>
+<!-- Full screen function -->
+<script>
+    var elem = document.documentElement;
+    
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    }
+    
+    function closeFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+</script>
  </body>
  </html>
