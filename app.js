@@ -333,7 +333,19 @@ logoContainer.addEventListener("mouseout", ()=> {
         }
   
           // show the alert 
-        alert.style.top = "0px"
+        if(screen.width <= 600) {
+          alert.style.opacity = "1";
+          alert.style.top = "50%"
+          setTimeout(() => {
+            alert.style.top = "70%"
+            alert.style.opacity = "0";
+          }, 2000);
+        }else {
+          alert.style.top = "0px"
+          setTimeout(() => {
+            alert.style.top = "-15px"
+          }, 2000);
+        }
   
         cursor.className += " hover"
 
@@ -344,7 +356,11 @@ logoContainer.addEventListener("mouseout", ()=> {
         circle2[index].style.bottom = "0px";
         circle2[index].style.left = "180px";
           // hide the alert 
-        alert.style.top = "-15%"
+        if(screen.width <= 600) {
+          alert.style.top = "50%"
+        }else {
+          alert.style.top = "-15%"
+        }
   
         cursor.className = "cursor"
     })

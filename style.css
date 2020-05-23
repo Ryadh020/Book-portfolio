@@ -565,6 +565,27 @@ footer {
 
 /* for mobile */
 @media only screen and (max-width: 600px) {
+/* alert section*/
+    .alert {
+        opacity: 0;
+        position: absolute;
+        top: 70%;
+
+        width: 100%;
+        height: 10%;
+        justify-content: center;
+
+        transition: 800ms all ease;
+        background-color: #000000;
+        color: #ffffff;
+        z-index: +1;
+        touch-action: none;
+    }  
+    .alertText {
+        text-align: center;
+    } 
+
+ 
     header {
         height: 15vh;
         justify-content: space-between;
