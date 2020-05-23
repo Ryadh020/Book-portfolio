@@ -573,23 +573,19 @@ footer {
     
         z-index: +5;
     }
-/* show the pivoting button */
-.head {
-    display: none;
-}
-.float {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 70%;
-}
 
-/* resize lodo*/
+/* resize logo*/
     .logo-image {
         width: 100px;
         height: 75px;
     }
-
+    .logo-name-text {
+        position: relative;
+        bottom: 22px;
+        
+        transition: all 0.3s ease;
+        font-family: 'Poiret One', cursive;
+    }
 /* replace button with socialMedia*/
     .top {
         display: flex;
@@ -744,9 +740,14 @@ footer {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-/* hide the footer*/
+/* hide the footer Content*/
     footer {
-        height: 0vh;
+        height: 10vh;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .pagesNumber {
         display: none;
@@ -754,6 +755,21 @@ footer {
     .bottom {
         display: none;
     }
+    /* show the pivoting button */
+        .head {
+            display: none;
+        }
+        .float {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 85%;
+            height: 45px;
+            
+            border: #a8a8a8 1px solid;
+            border-radius: 7px;
+        }
 /* replace the shaddow*/
 .borderBottom {
     display: none;
