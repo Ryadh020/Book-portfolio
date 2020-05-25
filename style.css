@@ -584,16 +584,17 @@ footer {
 
 }
 .fullscreenButton {
-    display: block;
-    width: 95vw;
-    height: 45px;
+    display: none;
+    width: 100vw;
+    height: 50px;
 
     border-style: none;
-    border: #ffffff 1px solid;
-    border-radius: 8px;
+    border-top: #ffffff 1px solid;
+    border-bottom: #ffffff 1px solid;
     background-color: transparent;
     color: rgb(255, 255, 255);
     outline: none;
+    transition: 2000ms all  ease;
 
     font-size: 1rem;
     font-family: 'Poiret One', cursive;
@@ -627,7 +628,7 @@ footer {
         justify-content: center;
 
         transition: 800ms all ease;
-        background-color: #ffffff;
+        background-color: #c0c0c0;
         color: #000000;
         z-index: +1;
         touch-action: none;

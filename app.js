@@ -193,7 +193,7 @@ buttons.forEach(button => {
           menuButton.style.color = "white";
         });
         socialMedia.style.color = "white"; 
-        logoText.style.color = "white"; 
+        logoText.style.color = "white";  
           // animate the actual page counter:
         actualPage.style.left = "50px";
         pagesNumber.style.color = "white";
@@ -469,5 +469,3 @@ let moveMouse = (e) => {
   
 }
 window.addEventListener("mousemove", moveMouse)
-
-

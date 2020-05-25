@@ -11,11 +11,11 @@
      <script src="https://kit.fontawesome.com/67098eac32.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  </head>
- <body>
+ <body onload="pageLoaded()">
 
         <div class="floatingPage fullScreen"></div>
 
-<!--
+
         <div class="cursor" id="cursor"></div>
 
         <div class="videoBackGround">
@@ -50,7 +50,7 @@
             </video>
             
         </div>
--->
+
 
         
         <header class="row">
@@ -117,6 +117,7 @@
 <!-- Full screen function -->
 <script>
     var elem = document.documentElement;
+    //let fullscreenButton = document.querySelector(".fullscreenButton")
     
     function openFullscreen() {
       if (elem.requestFullscreen) {
@@ -141,6 +142,12 @@
         document.msExitFullscreen();
       }
     }
+
+    function pageLoaded() {
+        fullscreenButton.style.display = "block";
+    }
+
+    
 </script>
  </body>
  </html>
