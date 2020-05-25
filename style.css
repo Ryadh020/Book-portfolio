@@ -320,6 +320,8 @@ a {
 
 /* footer section */
 footer {
+    display: flex;
+    flex-direction: row;
     height: 11vh;
     justify-content: space-between;
     align-items: center;
@@ -600,19 +602,17 @@ footer {
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
 }
+.buttonContainer {
+    width: 83vw;
+}
 .fullscreenOut {
     display: none;
-    width: 70px;
-    height: 45px;
-    position: absolute;
-    right: 0;
-    top: 30vh;
+    float: left;
+    height: 15px;
+    margin-bottom: 15px;
     z-index: +10;
 
     border-style: none;
-    border: #cccccc 1px solid;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
     background-color: transparent;
     color: rgb(172, 172, 172);
     outline: none;
@@ -665,12 +665,12 @@ footer {
 
 /* resize the main content */
     main {
-        height: 85vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0;
+        padding: 0px 0;
     
         color: black;
         z-index: +5;
@@ -805,11 +805,12 @@ footer {
     }
 /* hide the footer Content*/
     footer {
-        height: 9vh;
+        height: 14vh;
         padding: 0;
 
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
     }
     .pagesNumber {
