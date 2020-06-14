@@ -75,7 +75,7 @@ let pivot = false;
   CirclesContainer.innerHTML += `
     <div class="circles">
       <div class="circle1">
-          <img class="image" src="${competences[index].pic}" alt="8" srcset="">
+        <img class="image" src="${competences[index].pic}" alt="8" srcset="">
       </div>
       <div class="circle2"></div>
     </div>
@@ -85,16 +85,8 @@ let pivot = false;
   work.forEach((circle, index)=> {
     CirclesContainer.innerHTML += `
       <div class="circles2">
-        <div class="circle1">
-                <img class="image" src="${work[index].pic}" alt="8" srcset="">
-        </div>
-        <div class="circle3">
-          <div class="code center">
-            <a href="http://">Source Code</a>
-          </div>
-          <div class="live center">
-            <a href="http://">Live</a>
-          </div>
+        <div class="circle1 circl">
+          <a href="http://www.instagram.com" target="_blank"><img class="image" src="${work[index].pic}" alt="8" srcset=""></a>
         </div>
       </div>`
   })
@@ -105,7 +97,7 @@ let pivot = false;
 
   circles = document.querySelectorAll(".circles");
   circles2 = document.querySelectorAll(".circles2");
-  circle1 = document.querySelectorAll(".circle1");
+  circle1 = document.querySelectorAll(".circl");
   circle2 = document.querySelectorAll(".circle2");
   circle3 = document.querySelectorAll(".circle3");
   borderBottom = document.querySelector(".borderBottom");
@@ -192,7 +184,6 @@ buttons.forEach(button => {
         menuButtons.forEach(menuButton => {
           menuButton.style.color = "white";
         });
-        socialMedia.style.color = "white"; 
         logoText.style.color = "white";  
           // animate the actual page counter:
         actualPage.style.left = "50px";
@@ -382,43 +373,44 @@ logoContainer.addEventListener("mouseout", ()=> {
 circles2.forEach((circle, index) => {
 
   circle.addEventListener("mousemove", ()=> {
+    
       //change video & show buttons:
       setTimeout(() => {
         switch (index) {
           case 0:
-            circle3[0].style.display = "block";
+            circle1[0].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround1.style.visibility = "visible";
             break;
           case 1:
-            circle3[1].style.display = "block";
+            circle1[1].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround2.style.visibility = "visible";
             break;
           case 2:
-            circle3[2].style.display = "block";
+            circle1[2].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround3.style.visibility = "visible";
             break;
           case 3:
-            circle3[3].style.display = "block";
+            circle1[3].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround4.style.visibility = "visible";
             break; 
           case 4:
-            circle3[4].style.display = "block";
+            circle1[4].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround5.style.visibility = "visible";
             break;
           case 5:
-            circle3[5].style.display = "block";
+            circle1[5].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround6.style.visibility = "visible";
             break;
           case 6:
-            circle3[6].style.display = "block";
+            circle1[6].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround7.style.visibility = "visible";
             break;
           case 7:
-            circle3[7].style.display = "block";
+            circle1[7].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround8.style.visibility = "visible";
             break;
           case 8:
-            circle3[8].style.display = "block";
+            circle1[8].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
             videoBackGround9.style.visibility = "visible";
             break;
           default:
@@ -429,8 +421,8 @@ circles2.forEach((circle, index) => {
 
   circle.addEventListener("mouseout", ()=> {
       // hide buttons: 
-    circle3.forEach(circle => {
-      circle.style.display = "none";
+    circle1.forEach(circle => {
+      circle.style.backgroundColor = "transparent";
     });
       // hide video
     videoBackGround1.style.visibility = "hidden";
@@ -448,15 +440,19 @@ circles2.forEach((circle, index) => {
 
 /* social media hovering effect */
 somed.forEach(item => {
-  item.addEventListener("mousemove", ()=> {
-    item.className = "hovered"
-    cursor.className += " hover2"
-  })
-
-  item.addEventListener("mouseout", ()=> {
-    item.className = "somed"
-    cursor.className = " cursor"
-  })
+  if(screen.width >= 600) {
+    item.addEventListener("mousemove", ()=> {
+      item.className = "hovered"
+      cursor.className += " hover2"
+    })
+  
+    item.addEventListener("mouseout", ()=> {
+      item.className = "somed"
+      cursor.className = " cursor"
+    })
+  }else {
+    return;
+  }
 });
 
 // cursor moving effect

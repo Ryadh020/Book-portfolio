@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    cursor: none;
+    /*cursor: none;*/
     background-image: linear-gradient(to bottom right, #000000 100%, black 100%);
     overflow: hidden;
 
@@ -250,6 +250,7 @@ main {
 
     border: 1px rgba(110, 110, 110, 0.295) solid;
     border-radius: 20px;
+    background-color: transparent;
 }
 .image {
     width: 50px;
@@ -272,53 +273,10 @@ main {
 
     transition: all 1000ms ease;
 }
-.circle3 {
-    position: relative;
-    bottom: 180px;
-    left: 0px;
-    
-    width: 180px;
-    height: 180px;
-
-    background-color: rgba(173, 173, 173, 0.438);
-    opacity: 0;
-
-    border-radius: 20px;
-
-    transition: all 300ms ease;
-}
-.circle3:hover {
-    bottom: 190px;
-    left: -10px;
-    
-    opacity: 1;
-
-    cursor: pointer;
-}
-.code {
-    width: 180px;
-    height: 89px;
-
-    background-color: rgba(0, 0, 0, 0.445);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom: #ffffff 2px solid;
-}
-.live {
-    width: 180px;
-    height: 90px;
-
-    background-color: rgba(0, 0, 0, 0.445);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
 a {
     text-decoration: none;
     text-align: center;
     color: white;
-}
-.blackCircle {
-    background-image: linear-gradient(to right, #000000 0%, rgb(2, 2, 2) 100%);
 }
 
 /* footer section */
@@ -370,6 +328,7 @@ footer {
 
     border-radius: 50%;
     transition: 1000ms all ease;
+    color: rgb(109, 109, 109);
 }
 .hovered {
     width: 45px;
@@ -604,21 +563,6 @@ footer {
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
 }
-.buttonContainer {
-    width: 88vw;
-}
-.fullscreenOut {
-    display: none;
-    float: left;
-    height: 15px;
-    margin: 10px;
-    z-index: +10;
-
-    border-style: none;
-    background-color: transparent;
-    color: rgb(172, 172, 172);
-    outline: none;
-}
 /* videos */
 .videoBackGround {
     position: fixed;
@@ -692,7 +636,7 @@ footer {
 
 /* resize the main content */
     main {
-        height: 80vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -729,6 +673,16 @@ footer {
     .line {
         position: relative;
         top: -25px;
+
+        transition: all 0.6s ease;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family: 'Poiret One', cursive;
+    }
+    .line:hover {
+        position: relative;
+        top: -25px;
+        left: 0px;
 
         transition: all 0.6s ease;
         font-size: 1.5rem;
@@ -851,12 +805,27 @@ footer {
     .bottom {
         display: none;
     }
+    .buttonContainer {
+        display: block;
+        width: 88vw;
+    }
+    .fullscreenOut {
+
+        float: left;
+        height: 15px;
+        margin: 10px;
+        z-index: +10;
+    
+        border-style: none;
+        background-color: transparent;
+        color: rgb(172, 172, 172);
+        outline: none;
+    }
     /* show the pivoting button */
         .head {
             display: none;
         }
         .float {
-            display: flex;
             display: flex;
             justify-content: center;
             align-items: center;
