@@ -8,7 +8,7 @@ let competences = [
 ]
 
 let work = [
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
+    {pic : "./Images/mySQL.png", disc: "Db talks", link:"fdf/dfd/f"},
     {pic : "./Images/mySQL.png", disc: "Db talks"},
     {pic : "./Images/mySQL.png", disc: "Db talks"},
     {pic : "./Images/mySQL.png", disc: "Db talks"},

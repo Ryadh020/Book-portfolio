@@ -85,8 +85,12 @@ let pivot = false;
   work.forEach((circle, index)=> {
     CirclesContainer.innerHTML += `
       <div class="circles2">
-        <div class="circle1 circl">
-          <a href="http://www.instagram.com" target="_blank"><img class="image" src="${work[index].pic}" alt="8" srcset=""></a>
+        <div class="circle1 circl column">
+          <img class="image" src="${work[index].pic}" alt="8" srcset="">
+          <div class="buttonLive row" style="display:none;">
+            <a href="http://www.instagram.com" target="_blank" style="font-family: 'Poiret One', cursive;">live preview</a>
+            <img style="width:10px;height:10px;" alt="8" src="Images/Utilities/link.png">
+          </div>
         </div>
       </div>`
   })
@@ -99,7 +103,7 @@ let pivot = false;
   circles2 = document.querySelectorAll(".circles2");
   circle1 = document.querySelectorAll(".circl");
   circle2 = document.querySelectorAll(".circle2");
-  circle3 = document.querySelectorAll(".circle3");
+  buttonLive = document.querySelectorAll(".buttonLive");
   borderBottom = document.querySelector(".borderBottom");
 })()
 
@@ -379,38 +383,47 @@ circles2.forEach((circle, index) => {
         switch (index) {
           case 0:
             circle1[0].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[0].style.display = "flex";
             videoBackGround1.style.visibility = "visible";
             break;
           case 1:
             circle1[1].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[1].style.display = "flex";
             videoBackGround2.style.visibility = "visible";
             break;
           case 2:
             circle1[2].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[2].style.display = "flex";
             videoBackGround3.style.visibility = "visible";
             break;
           case 3:
             circle1[3].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[3].style.display = "flex";
             videoBackGround4.style.visibility = "visible";
             break; 
           case 4:
             circle1[4].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[4].style.display = "flex";
             videoBackGround5.style.visibility = "visible";
             break;
           case 5:
             circle1[5].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[5].style.display = "flex";
             videoBackGround6.style.visibility = "visible";
             break;
           case 6:
             circle1[6].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[6].style.display = "flex";
             videoBackGround7.style.visibility = "visible";
             break;
           case 7:
             circle1[7].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[7].style.display = "flex";
             videoBackGround8.style.visibility = "visible";
             break;
           case 8:
             circle1[8].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
+            buttonLive[8].style.display = "flex";
             videoBackGround9.style.visibility = "visible";
             break;
           default:
@@ -419,22 +432,23 @@ circles2.forEach((circle, index) => {
       }, 10);
   })
 
-  circle.addEventListener("mouseout", ()=> {
+  circle.addEventListener("mouseout", (event)=> {
       // hide buttons: 
-    circle1.forEach(circle => {
-      circle.style.backgroundColor = "transparent";
-    });
-      // hide video
-    videoBackGround1.style.visibility = "hidden";
-    videoBackGround2.style.visibility = "hidden";
-    videoBackGround3.style.visibility = "hidden";
-    videoBackGround4.style.visibility = "hidden";
-    videoBackGround5.style.visibility = "hidden";
-    videoBackGround6.style.visibility = "hidden";
-    videoBackGround7.style.visibility = "hidden";
-    videoBackGround8.style.visibility = "hidden";
-    videoBackGround9.style.visibility = "hidden";
-  })
+        circle1.forEach(circle => {
+          circle.style.backgroundColor = "transparent";
+        });
+          // hide video
+        videoBackGround1.style.visibility = "hidden";
+        videoBackGround2.style.visibility = "hidden";
+        videoBackGround3.style.visibility = "hidden";
+        videoBackGround4.style.visibility = "hidden";
+        videoBackGround5.style.visibility = "hidden";
+        videoBackGround6.style.visibility = "hidden";
+        videoBackGround7.style.visibility = "hidden";
+        videoBackGround8.style.visibility = "hidden";
+        videoBackGround9.style.visibility = "hidden";
+
+  }, false)
 });
 
 
