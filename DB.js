@@ -19,4 +19,9 @@ let work = [
     {pic : "./Images/mySQL.png", disc: "Db talks"},
 ]
 
+let backgroundVideos = [
+    "./Videos/tetris.m4v",
+    "./Videos/moviesApp.m4v"
+]
+
 

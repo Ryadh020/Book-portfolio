@@ -48,7 +48,7 @@ const linkedIn = document.querySelector(".linkedIn");
 const gitHub = document.querySelector(".gitHub");
 
 // background videos:
-const videosContainer = document.querySelector(".videoBackGround") 
+const videosContainer = document.querySelectorAll(".videoBackGround") 
 
 const videoBackGround1 = document.querySelector(".videoBackGround1") 
 const videoBackGround2 = document.querySelector(".videoBackGround2") 
@@ -71,6 +71,7 @@ let pivot = false;
 
 // fill the page content:
 (()=> {
+  // intro content:
   competences.forEach((circle, index)=> {
   CirclesContainer.innerHTML += `
     <div class="circles">
@@ -82,6 +83,7 @@ let pivot = false;
   `
   })
 
+  // works content:
   work.forEach((circle, index)=> {
     CirclesContainer.innerHTML += `
       <div class="circles2">
