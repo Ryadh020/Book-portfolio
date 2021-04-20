@@ -24,6 +24,11 @@ body {
 
     background-color: #a8a8a8;
 }
+.preLoadImage {
+    width: 45px;
+    height: 45px;
+    transition: all 2s ease;
+}
 .fullscreenButton {
     display: none;
 }
@@ -253,8 +258,8 @@ main {
     background-color: transparent;
 }
 .image {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 .whiteCircle {
     border: 1px rgba(255, 255, 255, 0.849) solid;

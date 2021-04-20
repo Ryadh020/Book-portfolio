@@ -2,6 +2,7 @@
   // fullscreen :
 const introPage = document.querySelector(".intro");
 const fullscreenButton = document.querySelector(".fullscreenButton");
+let preLoadImage = document.querySelector(".preLoadImage");
 const fullscreenOut = document.querySelector(".fullscreenOut");
   //pages:
 const Book = document.querySelector(".Book");
@@ -88,11 +89,7 @@ let pivot = false;
     CirclesContainer.innerHTML += `
       <div class="circles2">
         <div class="circle1 circl column">
-          <img class="image" src="${work[index].pic}" alt="8" srcset="">
-          <div class="buttonLive row" style="display:none;">
-            <a href="http://www.instagram.com" target="_blank" style="font-family: 'Poiret One', cursive;">live preview</a>
-            <img style="width:10px;height:10px;" alt="8" src="Images/Utilities/link.png">
-          </div>
+          <h3 style="color:pink">${work[index].pic}</h3>
         </div>
       </div>`
   })
@@ -105,9 +102,18 @@ let pivot = false;
   circles2 = document.querySelectorAll(".circles2");
   circle1 = document.querySelectorAll(".circl");
   circle2 = document.querySelectorAll(".circle2");
-  buttonLive = document.querySelectorAll(".buttonLive");
+  //buttonLive = document.querySelectorAll(".buttonLive");
   borderBottom = document.querySelector(".borderBottom");
 })()
+
+// Preloader animation:
+  setInterval(() => {
+    preLoadImage.style.transform = "rotate(360deg)";
+    setTimeout(() => {
+      preLoadImage.style.transform = "rotate(0deg)";
+    }, 2000);
+  }, 4000);
+
 
 // get fullscreen:
 function goFullScreen() {
@@ -128,7 +134,7 @@ buttons.forEach(button => {
         menuButton.style.fontSize = "0.1rem";
         menuButton.style.opacity = "0";
         setTimeout(() => {
-          menuButton.innerHTML = "back";
+          menuButton.innerHTML = "ABOUT";
           menuButton.style.opacity = "1";
           menuButton.style.fontSize = "1rem";
         }, 800);
@@ -137,7 +143,7 @@ buttons.forEach(button => {
         menuButton.style.fontSize = "0.1rem";
         menuButton.style.opacity = "0";
         setTimeout(() => {
-          menuButton.innerHTML = "next";
+          menuButton.innerHTML = "PROJECTS";
           menuButton.style.opacity = "1";
           menuButton.style.fontSize = "1rem";
         }, 800);
@@ -268,10 +274,10 @@ buttons.forEach(button => {
           // make the turned page effect:
         floatingPage.style.borderTopLeftRadius = "0%";
           // change text content
-        first.innerHTML = "lorem ipsum"
-        frst.innerHTML = "blabla lorem ipsum";
-        scnd.innerHTML = "lorem ipsum";
-        thrd.innerHTML = "blabla blabla";
+        first.innerHTML = "THIS IS ME RIYADH"
+        frst.innerHTML = "I do web UI/UX";
+        scnd.innerHTML = "+ taking care of code";
+        thrd.innerHTML = "+ making it wordpress theme";
       }, 1000);
       setTimeout(() => {
         // Show the text content:
@@ -385,47 +391,47 @@ circles2.forEach((circle, index) => {
         switch (index) {
           case 0:
             circle1[0].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[0].style.display = "flex";
+            //buttonLive[0].style.display = "flex";
             videoBackGround1.style.visibility = "visible";
             break;
           case 1:
             circle1[1].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[1].style.display = "flex";
+            //buttonLive[1].style.display = "flex";
             videoBackGround2.style.visibility = "visible";
             break;
           case 2:
             circle1[2].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[2].style.display = "flex";
+            //buttonLive[2].style.display = "flex";
             videoBackGround3.style.visibility = "visible";
             break;
           case 3:
             circle1[3].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[3].style.display = "flex";
+            //buttonLive[3].style.display = "flex";
             videoBackGround4.style.visibility = "visible";
             break; 
           case 4:
             circle1[4].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[4].style.display = "flex";
+            //buttonLive[4].style.display = "flex";
             videoBackGround5.style.visibility = "visible";
             break;
           case 5:
             circle1[5].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[5].style.display = "flex";
+            //buttonLive[5].style.display = "flex";
             videoBackGround6.style.visibility = "visible";
             break;
           case 6:
             circle1[6].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[6].style.display = "flex";
+            //buttonLive[6].style.display = "flex";
             videoBackGround7.style.visibility = "visible";
             break;
           case 7:
             circle1[7].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[7].style.display = "flex";
+            //buttonLive[7].style.display = "flex";
             videoBackGround8.style.visibility = "visible";
             break;
           case 8:
             circle1[8].style.backgroundColor = "rgba(70, 70, 70, 0.692)";
-            buttonLive[8].style.display = "flex";
+            //buttonLive[8].style.display = "flex";
             videoBackGround9.style.visibility = "visible";
             break;
           default:

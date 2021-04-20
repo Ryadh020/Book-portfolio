@@ -1,27 +1,23 @@
 let competences = [
-    {pic : "./Images/react.png", disc: "we react every thing"},
-    {pic : "./Images/node.png", disc: "let js do it"},
-    {pic : "./Images/wp.png", disc: "ur content is well manageed ur content is well manageed ur content is well manageed"},
-    {pic : "./Images/wp.png", disc: "ur content is well manageed ur content is well manageed ur content is well manageed"},
-    {pic : "./Images/wp.png", disc: "ur content is well manageed ur content is well manageed ur content is well manageed"},
-    {pic : "./Images/wp.png", disc: "ur content is well manageed ur content is well manageed ur content is well manageed"},
+    {pic : "./Images/figma.png", disc: "Using figma i creat mind blowing designs"},
+    {pic : "./Images/html.png", disc: "HTML is just the structure"},
+    {pic : "./Images/css.png", disc: "CSS3 makes everything look prety on the web"},
+    {pic : "./Images/js.png", disc: "With javascript we put live into web"},
+    {pic : "./Images/wp.png", disc: "And finally worpress makes it easier for you"},
 ]
 
 let work = [
-    {pic : "./Images/mySQL.png", disc: "Db talks", link:"fdf/dfd/f"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-    {pic : "./Images/mySQL.png", disc: "Db talks"},
-]
-
-let backgroundVideos = [
-    "./Videos/tetris.m4v",
-    "./Videos/moviesApp.m4v"
+    {pic : "ART SHOW", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "RECIPE APP", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "MOVIES APP", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "WEATHER APP", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "TO DO LIST", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "TETRIS GAME", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "DRAG & DROP GAME", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "MOVING STARS", disc: "Db talks", link:"fdf/dfd/f"},
+    {pic : "DAY NIGHT", disc: "Db talks", link:"fdf/dfd/f"},
 ]
 
 
+// SVG Animation: https://ryadh020.github.io/SVG-Animation/
+// Art Show: https://ryadh020.github.io/ArtShow/
