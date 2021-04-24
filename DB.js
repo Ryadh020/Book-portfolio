@@ -1,9 +1,10 @@
 let competences = [
-    {pic : "./Images/figma.png", disc: "Using figma i creat mind blowing designs"},
+    {pic : "./Images/figma.png", disc: "Using Figma, I create mind blowing designs"},
     {pic : "./Images/html.png", disc: "HTML is just the structure"},
-    {pic : "./Images/css.png", disc: "CSS3 makes everything look prety on the web"},
-    {pic : "./Images/js.png", disc: "With javascript we put live into web"},
-    {pic : "./Images/wp.png", disc: "And finally worpress makes it easier for you"},
+    {pic : "./Images/css.png", disc: "CSS3 makes everything look pretty on the web"},
+    {pic : "./Images/js.png", disc: "With javascript, I put life into web"},
+    {pic : "./Images/wp.png", disc: "And finally, wordpress makes it easier for you"},
+    {pic : "./Images/github.png", disc: "Don't forget our github"},
 ]
 
 let work = [

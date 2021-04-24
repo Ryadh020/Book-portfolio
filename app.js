@@ -89,7 +89,7 @@ let pivot = false;
     CirclesContainer.innerHTML += `
       <div class="circles2">
         <div class="circle1 circl column">
-          <h3 style="color:pink">${work[index].pic}</h3>
+          <h2 class="txt">${work[index].pic}</h2>
         </div>
       </div>`
   })
@@ -209,10 +209,10 @@ buttons.forEach(button => {
             // put the turned page to the bottom
           floatingPage.style.top = `${screen.width}%`;
             // change text content
-          first.innerHTML = "What I Do ?";
-          frst.innerHTML = "create and edit";
-          scnd.innerHTML = "Improve web ";
-          thrd.innerHTML = "Build custom  ";
+          first.innerHTML = "What I Do on free time ?";
+          frst.innerHTML = "i make web apps";
+          scnd.innerHTML = "Web games";
+          thrd.innerHTML = "And i have fun";
         }, 600);
         setTimeout(() => {
           // Show the text content:
@@ -345,6 +345,12 @@ logoContainer.addEventListener("mouseout", ()=> {
             text.textContent = competences[index].disc
             break;
           case 3:
+            text.textContent = competences[index].disc
+            break;
+          case 4:
+            text.textContent = competences[index].disc
+            break;
+          case 5:
             text.textContent = competences[index].disc
             break;
         
