@@ -1,6 +1,7 @@
 * {
     /*outline: 1px red solid;*/
     box-sizing: border-box;
+    cursor: none;
 }
 body {
     width: 100%;
